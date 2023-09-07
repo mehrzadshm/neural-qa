@@ -1,0 +1,3001 @@
+Prompt,Actual SPARQL,Generated SPARQL,BLEU Score
+"# write a SPARQL query for:
+# How many orbital periods did gliese 876 d (orbital orbit) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Gliese_876_d dbo:orbitalPeriod ?x },select count(*) as?x where{dbr:Gliese_876_D dbo:orbitalPeriod?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who was georg ehrlich's mayor ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Georg_Ehrlich dbo:deathPlace ?x1 . ?x1 dbo:mayor ?x },select?x where{dbr:Georg_Ehrlich dbo:mayor?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the EC numbers of the hydroxylamine reductase ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Hydroxylamine_reductase_(NADH) dbo:ecNumber ?x },select?x where{dbr:Hydroxylamine_reductase dbo:ec?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the epoch of 3800 karayusuf ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:3800_Karayusuf dbo:epoch },ask where{dbr:3800_Karayusuf dbo:epoch?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many updated versions of toolame (2007, 2016) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:TooLAME dbo:latestReleaseVersion ?x },select count(*) as?x where{dbr:Toolame dbo:updatedVersion?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did central american spanish speak in the past ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Central_American_Spanish dbo:spokenIn ?x },ask where{dbr:Central_American_Spanish dbo:speaksInPast?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the kingdom of meioceras cubitatum and oneida marmorata ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Meioceras_cubitatum dbo:kingdom ?x . dbr:Oneida_marmorata dbo:kingdom ?x },select?x where{dbr:Meioceras_cubitatum dbo:kingdom?x. dbr:Oneida_marmorata dbo:kingdom?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the fastest driver team of luigi piotti's first race ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Luigi_Piotti dbo:firstRace ?x1 . ?x1 dbo:fastestDriverTeam ?x },select?x where{dbr:Luigi_Piotti dbo:firstRace?x1.?x1 dbo:fastestDriverTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who are gold medalists of swimming at the 2016 summer olympics – women's 200 metre breaststroke and swimming at the 1952 summer olympics – women's 200 metre breaststroke ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Swimming_at_the_1952_Summer_Olympics_–_Women's_200_metre_breaststroke dbo:goldMedalist ?x . dbr:Swimming_at_the_2016_Summer_Olympics_–_Women's_200_metre_breaststroke dbo:goldMedalist ?x },select?x where{dbr:Swimming_at_the_2016_Summer_Olympics_–_Women's_200_metre_breaststroke dbo:goldMedalist?x. dbr:Swimming_at_the_1952_Summer_Olympics_–_Women's_200_metre_breaststroke dbo:goldMedalist?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the largest number of employees of child organization ministry of defense ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ministry_of_Defense_(Japan) dbo:childOrganisation ?x1 . ?x1 dbo:numberOfEmployees ?x}order by desc (?x) limit 1,select?x where{dbr:Ministry_of_Defense dbo:childOrganization?x1.?x1 dbo:numberOfEmployees?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the hybrid between gala and allington pippin ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Gala_(apple) dbo:hybrid ?x . dbr:Allington_Pippin dbo:hybrid ?x },select?x where{dbr:Gala dbo:hybrid?x. dbr:Allington_Pippin dbo:hybrid?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Give me all located in area of combs moss with less than 5 number of visitors ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{?x1 dbo:located in area dbr:Combs_Moss . ?x1 dbo:numberOfVisitors ?x filter  (  ?x < 5  )  },select?x where{dbr:Combs_Moss dbo:locatedInArea?x1.?x1 dbo:numberOfVisitors?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How much is spear 3 kg ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:SPEAR_3 dbo:weight ?x },select?x where{dbr:Spear_3 dbo:weight?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did abc gippsland have programme format ? Is that cool ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:ABC_Gippsland dbo:programmeFormat ?x },ask where{dbr:ABC_Gippsland dbo:programmeFormat?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the last publication date of inugami-san to nekoyama-san ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Inugami-san_to_Nekoyama-san dbo:lastPublicationDate ?x },select?x where{dbr:Inugami-san dbo:lastPublicationDate?x. dbr:Nekoyama-san dbo:lastPublicationDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the broadcast networks of kgll and kbay ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:KBAY dbo:broadcastNetwork ?x . dbr:KGLL dbo:broadcastNetwork ?x },select?x where{dbr:Kgll dbo:broadcastNetwork?x. dbr:Kbay dbo:broadcastNetwork?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the direction of the pole of the tony brooks sign ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tony_Brooks_(racing_driver) dbo:poles ?x },select?x where{dbr:Tony_Brooks dbo:pole?x1.?x1 dbo:direction?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did philippine house committee on housing and urban development have legislative period name ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Philippine_House_Committee_on_Housing_and_Urban_Development dbo:legislativePeriodName ?x },ask where{dbr:Philippine_House_Committee_on_Housing_and_Urban_Development dbo:legislativePeriodName?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the alma mater of samuel poyntz and sanan alizade ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Samuel_Poyntz dbo:almaMater ?x . dbr:Sanan_Alizade dbo:almaMater ?x },select?x where{dbr:Samuel_Poyntz dbo:almaMater?x. dbr:Sanan_Alizade dbo:almaMater?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the notableIdea of kurt lewin's doctoral advisor ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Kurt_Lewin dbo:doctoralAdvisor ?x1 . ?x1 dbo:notableIdea ?x },select?x where{dbr:Kurt_Lewin dbo:doctoralAdvisor?x1.?x1 dbo:notableIdea?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the area total of collins creek's mouth (Leckier collins creek) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Collins_Creek_(Haw_River_tributary) dbo:mouthPlace ?x1 . ?x1 dbo:areaTotal ?x },select?x where{dbr:Collins_Creek dbo:mouth?x1.?x1 dbo:areaTotal?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When does mv viking sea christening take place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:MV_Viking_Sea_(2015) dbo:christeningDate ?x },select?x where{dbr:MV_Viking_Sea_Christening dbo:startDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many lines did yangon brt have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Yangon_BRT dbo:numberOfLines ?x },select count(*) as?x where{dbr:Yangon_BRT dbo:numberOfLines?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the birth date of ana mendieta's spouse ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ana_Mendieta dbo:spouse ?x1 . ?x1 dbo:birthDate ?x },select?x where{dbr:Ana_Mendieta dbo:spouse?x1.?x1 dbo:birthDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is bill hewitt's capital ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Bill_Hewitt_(politician) dbo:nationality ?x1 . ?x1 dbo:capital ?x },select?x where{dbr:Bill_Hewitt dbo:capital?x1.?x1 dbo:capital?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the military branch of gordon r. sullivan ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Gordon_R._Sullivan dbo:militaryBranch ?x },select?x where{dbr:Gordon_R._Sullivan dbo:militaryBranch?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did brogo dam have the river ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Brogo_Dam dbo:river ?x },ask where{dbr:Brogo_dam dbo:river?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How does gini coefficient of united states and new zealand differ ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:New_Zealand dbo:giniCoefficient ?x . dbr:United_States dbo:giniCoefficient ?x },select?x where{dbr:United_States dbo:giniCoefficient?x. dbr:New_Zealand dbo:giniCoefficient?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the 2nd Commander of lonnie r. moore's Military Branch ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Lonnie_R._Moore dbo:militaryBranch ?x1 . ?x1 dbo:secondCommander ?x },select?x where{dbr:Lonnie_R._Moore dbo:militaryBranch?x1.?x1 dbo:secondCommander?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did captain from castile have any starring status ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Captain_from_Castile dbo:starring ?x },ask where{dbr:Captain_from_Castile dbo:starringStatus?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the capital of tunisia and rwenzururu ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tunisia dbo:capital ?x . dbr:Rwenzururu dbo:capital ?x },select?x where{dbr:Tunisia dbo:capital?x. dbr:Rwenzururu dbo:capital?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is the population of friesdorf ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Friesdorf_(Bonn) dbo:populationAsOf ?x },select?x where{dbr:Friesdorf dbo:population?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many MPH is allowed per hornbæk line ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Hornbæk_Line dbo:speedLimit ?x },select count(*) as?x where{dbr:Hornbæk dbo:allowedMPH?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did band of the royal regiment of scotland have march ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Band_of_the_Royal_Regiment_of_Scotland dbo:march ?x },ask where{dbr:Band_of_the_Royal_Regiment_of_Scotland dbo:march?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is heartect automobile platform of suzuki s-presso ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Suzuki_S-Presso dbo:automobilePlatform dbr:HEARTECT },ask where{dbr:Suzuki_S-Presso dbo:automobilePlatform dbr:Heartect }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the previous work of previous work of you know me better than that as well as can't stop dancin' ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:You_Know_Me_Better_Than_That dbo:previousWork ?x . dbr:Can't_Stop_Dancin'_(Becky_G_song) dbo:previousWork ?x },select?x where{dbr:You_Know_Me_Better_Than_That dbo:previousWork?x. dbr:Can't_Stop_Dancin' dbo:previousWork?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the ISO 639 code of the original the suppliants language ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:The_Suppliants_(Euripides) dbo:originalLanguage ?x1 . ?x1 dbo:iso6393Code ?x },select?x where{dbr:The_Suppliants dbo:originalLanguage?x1.?x1 dbo:iso6391Code?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 1854-03-13 going to start dating and then turn into 1854 chicago mayoral election ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:1854_Chicago_mayoral_election dbo:startDate ""1854-03-13""^^xsd:dateTime }",ask where{dbr:Chicago_Mayoral_Election dbo:startDate dbr:1854-03-13 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did beaver dam have a national political leader ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:Beaver_Dam,_Wisconsin dbo:politicalLeader ?x }",ask where{dbr:Beaver_Dam dbo:nationalPoliticalLeader?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the ethnic group of valerian stan ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Valerian_Stan dbo:nationality ?x1 . ?x1 dbo:ethnicGroup ?x },select?x where{dbr:Valerian_Stan dbo:ethnicGroup?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did matt figger have current record ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Matt_Figger dbo:currentRecord ?x },ask where{dbr:Matt_Figger dbo:currentRecord?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did delvecchio have network ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Delvecchio_(TV_series) dbo:network ?x },ask where{dbr:Delvecchio dbo:network?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did obrigheim have a leader party ? Why or why not ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:Obrigheim,_Rhineland-Palatinate dbo:leaderParty ?x }",ask where{dbr:Obrigheim dbo:leaderParty?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What was rudolf friedrich kurz's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Rudolf_Friedrich_Kurz dbo:deathPlace ?x1 . ?x1 dbo:thumbnail ?x },select?x where{dbr:Rudolf_Friedrich_Kurz dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What municipality code did dürrenroth have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Dürrenroth dbo:municipalityCode ?x },select?x where{dbr:Dürrenroth dbo:municipalityCode?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did vp-29 have an airplane patrol ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:VP-29_(1946–1955) dbo:aircraftPatrol ?x },ask where{dbr:VP-29 dbo:aircraftPatrol?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What metropolitan borough did gateacre have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Gateacre dbo:metropolitanBorough ?x },select?x where{dbr:Gateacre dbo:metropolitanBorough?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is cristo rey network's oversight of cristo rey kansas city high school ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Cristo_Rey_Kansas_City_High_School dbo:oversight Cristo Rey Network },select?x where{dbr:Cristo_Rey_Kansas_City_High_School dbo:oversight?x1.?x1 dbo:network?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did no. 15 squadron iaf have aircraft attack ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:No._15_Squadron_IAF dbo:aircraftAttack ?x },ask where{dbr:No._15_Squadron_IAF dbo:aircraftAttack?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which alma mater of david haley has the least amount of students ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{?x1 dbo:alma mater dbr:David_Haley . ?x1 dbo:numberOfStudents ?x filter  (  ?x < 50  )  },select?x where{dbr:David_Haley dbo:almaMater?x1.?x1 dbo:numberOfStudents?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the birth year of the oriental art center's architect ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Oriental_Art_Center dbo:architect ?x1 . ?x1 dbo:birthYear ?x },select?x where{dbr:Oriental_Art_Center dbo:architect?x1.?x1 dbo:birthYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the pole driver of the heinz schiller's first race ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Heinz_Schiller dbo:firstRace ?x1 . ?x1 dbo:poleDriver ?x },select?x where{dbr:Heinz_Schiller dbo:firstRace?x1.?x1 dbo:poleDriver?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did 2009 club león season have ground ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:2009_Club_León_season dbo:ground ?x },ask where{dbr:2009_Club_León dbo:ground?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did private terms have grandsire ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Private_Terms dbo:grandsire ?x },ask where{dbr:Private_Terms dbo:grandsire?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many narrator did nothing by chance have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Nothing_by_Chance dbo:narrator ?x },select count(*) as?x where{dbr:Nothing_by_Chance dbo:narrator?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is afghans in sweden's population place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Afghans_in_Sweden dbo:populationPlace ?x1 . ?x1 dbo:populationAsOf ?x },select?x where{dbr:Afghans_in_Sweden dbo:populationPlace?x1.?x1 dbo:population?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is mount nivelle district of briesen ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Briesen_(Mark) dbo:district dbr:Mount_Nivelle },ask where{dbr:Briesen dbo:district dbr:Mount_Nivelle }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did cyrano have music by ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Cyrano_(musical) dbo:musicBy ?x },ask where{dbr:Cyrano dbo:musicBy?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does the movie crash dive have cinematography ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Crash_Dive dbo:cinematography ?x },ask where{dbr:The_Dive_(film) dbo:cinematography?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did bunion have treatment ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Bunion dbo:treatment ?x },ask where{dbr:Bunion dbo:treatment?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is toyota g16e engine compression ratio of nissan cg engine ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Nissan_CG_engine dbo:compressionRatio dbr:Toyota_G16E_engine },ask where{dbr:Nissan_CG_engine dbo:engineCompressionRatio dbr:Toyota_G16E }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many doors are there in <B> ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{<B> dbo:numberOfDoors dbr:PD-4501_Scenicruiser },select count(*) as?x where{<B> dbo:numberOfDoors?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the minimum elevation of durif's wine region ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Durif dbo:wineRegion ?x1 . ?x1 dbo:minimumElevation ?x },select?x where{dbr:Durif dbo:wineRegion?x1.?x1 dbo:minimumElevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the is part of sonoma coast ava as well as gigondas aoc wine region ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Sonoma_Coast_AVA dbo:isPartOfWineRegion ?x . dbr:Gigondas_AOC dbo:isPartOfWineRegion ?x },select?x where{dbr:Sonoma_Coast_AVA dbo:isPartOf?x. dbr:Gigondas_AOC_Wine_Region dbo:isPartOf?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did namtok chat trakan national park have IUCN category (Roma/Khiri Kaplan) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Namtok_Chat_Trakan_National_Park dbo:iucnCategory ?x },ask where{dbr:Namtok_Chat_Trakan_National_Park dbo:iucnCategory dbr:Roma/Khiri_Kaplan }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the actual situation of the no. 224 squadron iaf and no. 127 helicopter unit iaf aircraft attacks ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:No._127_Helicopter_Unit_IAF dbo:aircraftAttack ?x . dbr:No._224_Squadron_IAF dbo:aircraftAttack ?x },select?x where{dbr:No._224_Squadron_IAF dbo:attacker?x. dbr:No._127_Helicopter_Unit_IAF_aircraft dbo:attacker?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many fates did r & g financial corporation have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:R_&_G_Financial_Corporation dbo:fate ?x },select count(*) as?x where{dbr:R_&_G_Financial_Corporation dbo:fate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is uss portland's homeport located ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:USS_Portland_(LPD-27) dbo:homeport ?x1 . ?x1 dbo:location ?x },ask where{dbr:USS_Portland dbo:homeport?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did u.s. route 50 in illinois has road junction ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:U.S._Route_50_in_Illinois dbo:routeJunction ?x },ask where{dbr:U.S._Route_50_in_Illinois dbo:roadJunction?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the toll of newport transporter bridge ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Newport_Transporter_Bridge dbo:toll ?x },select?x where{dbr:Newport_Transporter_Bridge dbo:toll?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the aircraft attack of dewitt searles's military branch ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:DeWitt_Searles dbo:militaryBranch ?x1 . ?x1 dbo:aircraftAttack ?x },select?x where{dbr:Dewitt_Searles dbo:militaryBranch?x1.?x1 dbo:aircraftAttack?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the Wikipage revision ID of gabbro peak's located in area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Gabbro_Peak_(California) dbo:locatedInArea ?x1 . ?x1 dbo:wikiPageRevisionID ?x },select?x where{dbr:Gabbro_Peak dbo:locatedInArea?x1.?x1 dbo:wikiPageRevisionId?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the method of discovery of the kepler-37d ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Kepler-37d dbo:detectionMethod },select?x where{dbr:Kepler-37d dbo:discoveryMethod?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many composers are there in ricky rapper and the bicycle thief ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Ricky_Rapper_and_the_Bicycle_Thief dbo:musicComposer ?x },select count(*) as?x where{dbr:Ricky_Rapper dbo:composer?x. dbr:The_Bicycle_Thief dbo:composer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is sheffield springs academy middle age ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Sheffield_Springs_Academy dbo:upperAge ?x },select?x where{dbr:Sheffield_Springs_Academy dbo:middleAge?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is laying down of uss milius and uss breeman ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:USS_Milius dbo:layingDown ?x . dbr:USS_Breeman dbo:layingDown ?x },select?x where{dbr:USS_Milius dbo:layingDown?x. dbr:USS_Breeman dbo:layingDown?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who was caroline endres diescher's spouse ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Caroline_Endres_Diescher dbo:spouse ?x1 . ?x1 dbo:relation ?x },select?x where{dbr:Caroline_Endres_Diescher dbo:spouse?x1.?x1 dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many maximum elevation did rochefort-du-gard have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Rochefort-du-Gard dbo:maximumElevation ?x },select count(*) as?x where{dbr:Rochefort-du-Gard dbo:maximumElevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the elevation of courchamp and colligny ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Colligny dbo:minimumElevation ?x . dbr:Courchamp dbo:minimumElevation ?x },select?x where{dbr:Courchamp dbo:elevation?x. dbr:Colligny dbo:elevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the death date of andrea superti-furga's academic advisor ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Andrea_Superti-Furga dbo:academicAdvisor ?x1 . ?x1 dbo:deathDate ?x },select?x where{dbr:Andrea_Superti-Furga dbo:academicAdvisor?x1.?x1 dbo:deathDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many cylinders did the mlw m-636 have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:MLW_M-636 dbo:cylinderCount ?x },select count(*) as?x where{dbr:MLW_M-636 dbo:cylinder?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is runway length of the intercaribbean airways's hub airport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:InterCaribbean_Airways dbo:hubAirport ?x1 . ?x1 dbo:runwayLength ?x },select?x where{dbr:Intercaribbean_Airways dbo:hubAirport?x1.?x1 dbo:runwayLength?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What should or ISO 639odia language1 code of odia language be ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Odia_language dbo:iso6391Code or },select?x where{dbr:Odia_language dbo:iso639odiaLanguage1Code?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Could the name ho chi minh city have a population metro density ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ho_Chi_Minh_City dbo:populationMetroDensity ?x },ask where{dbr:Ho_Chi_Minh_City dbo:populationMetroDensity?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How are 1960 united states grand prix and 1958 monaco grand prix defined by distance ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:1960_United_States_Grand_Prix dbo:distance ?x . dbr:1958_Monaco_Grand_Prix dbo:distance ?x },select?x where{dbr:1960_United_States_Grand_Prix dbo:distance?x. dbr:1958_Monaco_Grand_Prix dbo:distance?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is your opinion about mike massimino Selection of oleg novitsky ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Oleg_Novitsky dbo:selection dbr:Mike_Massimino },select?x where{dbr:Mike_Massimino dbo:selection?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which is the principal area of tondu ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tondu dbo:principalArea ?x },select?x where{dbr:Tondu dbo:principalArea?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Can you help me with the Abstract of ss zaanland's homeport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:SS_Zaanland dbo:homeport ?x1 . ?x1 dbo:abstract ?x },ask where{dbr:SS_Zaanland dbo:homeport?x1.?x1 dbo:abstract?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is virginia state route 178 the length of louisiana highway 102 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Louisiana_Highway_102 dbo:length dbr:Virginia_State_Route_178 },ask where{dbr:Louisiana_Highway_102 dbo:routeLength dbr:Virginia_State_Route_178 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many asset under management did strategic investment group have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Strategic_Investment_Group dbo:assetUnderManagement ?x },select count(*) as?x where{dbr:Strategic_Investment_Group dbo:assetUnderManagement?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is 29800.0 tuition in university of toronto schools ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:University_of_Toronto_Schools dbo:tuition 29800.0 },select?x where{dbr:University_of_Toronto_Schools dbo:tuition?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many teams have existed since billy shindle opened their debut album ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Billy_Shindle dbo:debutTeam ?x },select count(*) as?x where{dbr:Billy_Shindle dbo:debutAlbum?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What strength is battle of chimborazo ? Is it like battle of port cros ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Battle_of_Chimborazo dbo:strength ?x . dbr:Battle_of_Port_Cros dbo:strength ?x },ask where{dbr:Battle_of_Chimborazo dbo:strength?x. dbr:Battle_of_Port_Cros dbo:strength?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did frederick august otto schwarz really have a relative ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Frederick_August_Otto_Schwarz dbo:relative ?x },ask where{dbr:Frederick_August_Otto_Schwarz dbo:relative?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the most employees at maîtresse ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Maîtresse dbo:productionCompany ?x1 . ?x1 dbo:numberOfEmployees ?x}order by desc (?x) limit 1,select?x where{dbr:Maîtresse dbo:mostEmployees?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did soma festival have end date ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Soma_Festival dbo:endDate ?x },ask where{dbr:Soma_Festival dbo:endDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did 1990 carlentini earthquake have any casualties ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:1990_Carlentini_earthquake dbo:casualties ?x },ask where{dbr:1990_Carlentini_earthquake dbo:casualties?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many census year did the planet ried-brig have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Ried-Brig dbo:censusYear ?x },select count(*) as?x where{dbr:The_Planet_Ried-Brig dbo:censusYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the country code of adélie land and tajikistan ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tajikistan dbo:countryCode ?x . dbr:Adélie_Land dbo:countryCode ?x },select?x where{dbr:Adélie_Land dbo:countryCode?x. dbr:Tajikistan dbo:countryCode?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many prospect league did chase priskie have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Chase_Priskie dbo:prospectLeague ?x },select count(*) as?x where{dbr:Chase_Priskie dbo:prospectLeague?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the periapsis of 2005 rr43 and 2015 bp513 and how are they different in other regions ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:(145453) _2005_RR43 dbo:periapsis ?x . dbr:2015_BP513 dbo:periapsis ?x },select?x where{dbr:2005_RR43 dbo:periapsis?x. dbr:2015_BP513 dbo:periapsis?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does georgia state route 192 is the route number of utah state route 24 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Utah_State_Route_24 dbo:routeNumber dbr:Georgia_State_Route_192 },ask where{dbr:Utah_State_Route_24 dbo:routeNumber dbr:Georgia_State_Route_192 }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# What is the capital of tayfun taşdemir's sport country ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tayfun_Taşdemir dbo:sportCountry ?x1 . ?x1 dbo:capital ?x },select?x where{dbr:Tayfun_Taşdemir dbo:sportCountry?x1.?x1 dbo:capital?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did cap-haïtien arrondissement have the rural area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Cap-Haïtien_Arrondissement dbo:areaRural ?x },ask where{dbr:Cap-Haïtien_Arrondissement dbo:ruralArea?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the Bioavailability of ipragliflozin ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ipragliflozin dbo:bioavailability ?x },select?x where{dbr:Ipragliflozin dbo:bioavailability?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did messalina aire auteur of a movie ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Messalina_(1951_film) dbo:writer ?x },ask where{dbr:Messalina_Aire dbo:author?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many bronze medalist is swimming at the 2004 summer olympics – men's 4 × 100 metre medley relay ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Swimming_at_the_2004_Summer_Olympics_–_Men's_4_×_100_metre_medley_relay dbo:bronzeMedalist ?x },select count(*) as?x where{dbr:Swimming_at_the_2004_Summer_Olympics_–_Men's_4_×_100_metre_medley_relay dbo:bronzeMedalist?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How large is 77539.0 campus size for st. ignatius el bosque ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:St._Ignatius_El_Bosque dbo:campusSize 77539.0 },select?x where{dbr:St._Ignatius_El_Bosque dbo:campusSize?x1.?x1 dbo:size?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the number of students of carlos massad's alma mater ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Carlos_Massad dbo:almaMater ?x1 . ?x1 dbo:numberOfStudents ?x },select?x where{dbr:Carlos_Massad dbo:almaMater?x1.?x1 dbo:numberOfStudents?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is who_do_you_think_you_are%3f_ an ved du hvem du er? prior work ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ved_du_hvem_du_er%3F dbo:previousWork dbr:Who_Do_You_Think_You_Are%3F_(British_TV_series) },ask where{dbr:Who_do_you_think_you_are dbo:priorWork?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the overall record of bill harrison ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Bill_Harrison_(ice_hockey) dbo:overallRecord ?x },select?x where{dbr:Bill_Harrison dbo:overallRecord?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the maximum runway length on an <B> ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{<B> dbo:runwayLength dbr:Takotna_Airport },select?x where{<B> dbo:maximumRunwayLength?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is thrombus ICD9 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Thrombus dbo:icd9 ?x },select?x where{dbr:Thrombus dbo:icd9?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the chromosome of brn-3 and tuberous sclerosis protein ? What is the chromosome of t-terminus ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:BRN-3 dbo:chromosome ?x . dbr:Tuberous_sclerosis_protein dbo:chromosome ?x },select?x where{dbr:Brn-3 dbo:chromosome?x. dbr:Tuberous_sclerosis_protein dbo:chromosome?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the person of the kid with the broken halo and in the best interest of the child ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:The_Kid_with_the_Broken_Halo dbo:person ?x . dbr:In_the_Best_Interest_of_the_Child dbo:person ?x },select?x where{dbr:The_Kid_with_the_Broken_Halo dbo:person?x. dbr:In_the_Best_Interest_of_the_Child dbo:person?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the number of graduate students of nanjing foreign language school ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Nanjing_Foreign_Language_School dbo:numberOfGraduateStudents ?x },select?x where{dbr:Nanjing_Foreign_Language_School dbo:numberOfGraduateStudents?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the roura Area belgentier ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Roura dbo:area dbr:Belgentier },ask where{dbr:Belgentier dbo:area dbr:Roua }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the associated musical artists of hello love's performer ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Hello_Love_(song) dbo:artist ?x1 . ?x1 dbo:associatedMusicalArtist ?x },select?x where{dbr:Hello_Love dbo:musicArtist?x1.?x1 dbo:musicArtist?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which restaurant is better in cinnamon citadel kandy and which is better in mandarin oriental ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Cinnamon_Citadel_Kandy dbo:numberOfRestaurants ?x . dbr:Mandarin_Oriental,_Taipei dbo:numberOfRestaurants ?x }",select?x where{dbr:Cinnamon_Citadel_Kandy dbo:bestRestaurant?x. dbr:Mandarin_Oriental dbo:bestRestaurant?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many champions did 1998 italian open have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:1998_Italian_Open_(tennis) dbo:championInDoubleFemale ?x },select count(*) as?x where{dbr:1998_Italian_Open dbo:champion?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which city is closest to booker t. washington national monument ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Booker_T._Washington_National_Monument dbo:nearestCity ?x },select?x where{dbr:Booker_T._Washington_National_Monument dbo:nearestCity?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the incumbent conwy county borough council and how was his election day ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Conwy_County_Borough_Council dbo:electionDateLeader ?x . <B> dbo:electionDateLeader ?x },select?x where{dbr:Conwy_County_Borough_Council dbo:incumbent?x1.?x1 dbo:electionDay?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What was the first driver of 1988 british grand prix or 1952 buenos aires grand prix ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:1988_British_Grand_Prix dbo:firstDriverCountry ?x . dbr:1952_Buenos_Aires_Grand_Prix_(II) dbo:firstDriverCountry ?x },select?x where{dbr:1988_British_Grand_Prix dbo:firstDriver?x. dbr:1952_Buenos_Aires_Grand_Prix dbo:firstDriver?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the used in war of ordnance factory board mine protected vehicle ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ordnance_Factory_Board_Mine_Protected_Vehicle dbo:usedInWar ?x },select?x where{dbr:Ordnance_Factory_Board_Mine dbo:protectedVehicle?x1.?x1 dbo:usedInWar?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the license of ruby-plsql-spec and firefox for android ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ruby-plsql-spec dbo:license ?x . dbr:Firefox_for_Android dbo:license ?x },select?x where{dbr:Ruby-PLSQL-Spec dbo:license?x. dbr:Firefox_for_Android dbo:license?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What does Is yao language ISO 639-3 code of nahuatl ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Nahuatl dbo:iso6393Code dbr:Yao_language },select?x where{dbr:Nahuatl dbo:iso6393Code?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many mountain range did mount wilhelm have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Mount_Wilhelm dbo:mountainRange ?x },select count(*) as?x where{dbr:Mount_Wilhelm dbo:mountainRange?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is class of mitsuoka ryoga's related mean of transportation ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mitsuoka_Ryoga dbo:relatedMeanOfTransportation ?x1 . ?x1 dbo:class ?x },select?x where{dbr:Mitsuoka_Ryoga dbo:relatedMeanOfTransportation?x1.?x1 dbo:class?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the engine of dkw f7 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:DKW_F7 dbo:engine ?x },select?x where{dbr:DKW_F7 dbo:engine?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did ford falcon have hundreds of transmissions ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Ford_Falcon_(FG_X) dbo:transmission ?x },ask where{dbr:Ford_Falcon dbo:hundredsOfTransmissions?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the regions served by islamic centre for development of trade and coppa's fresh market ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Coppa's_Fresh_Market dbo:regionServed ?x . dbr:Islamic_Centre_for_Development_of_Trade dbo:regionServed ?x },select?x where{dbr:Islamic_Centre_for_Development_of_Trade_and_Coppa dbo:freshMarket?x1.?x1 dbo:region?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the number of visitors mount fairchild's located in area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mount_Fairchild dbo:locatedInArea ?x1 . ?x1 dbo:numberOfVisitors ?x },select?x where{dbr:Mount_Fairchild dbo:locatedInArea?x1.?x1 dbo:numberOfVisitors?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the railway line using tunnel of buramsan tunnel as well as brookville tunnel ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Buramsan_Tunnel dbo:railwayLineUsingTunnel ?x . dbr:Brookville_Tunnel dbo:railwayLineUsingTunnel ?x },select?x where{dbr:Tunnel_of_Buramsan dbo:railwayLine?x. dbr:Brookville_Tunnel dbo:railwayLine?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What was avner yashar's date of death ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Avner_Yashar dbo:spouse ?x1 . ?x1 dbo:deathDate ?x },select?x where{dbr:Avner_Yashar dbo:dateOfDeath?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What ideology does the italian democratic socialist party's merged with ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Italian_Democratic_Socialist_Party dbo:mergedWith ?x1 . ?x1 dbo:ideology ?x },select?x where{dbr:The_Italian_Democratic_Socialist_Party dbo:mergedWith?x1.?x1 dbo:ideology?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the elevation of rohr ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Rohr,_Solothurn dbo:elevation ?x }",select?x where{dbr:Rohr dbo:elevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the designation of runway of air caraïbes's hub airport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Air_Caraïbes dbo:hubAirport ?x1 . ?x1 dbo:runwayDesignation ?x },select?x where{dbr:Air_Caraïbes dbo:hubAirport?x1.?x1 dbo:runwayDesignation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the joseph horatio anderson building the john dalton significantly significant ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:John_Dalton_(architect) dbo:significantBuilding dbr:Joseph_Horatio_Anderson },ask where{dbr:John_Dalton dbo:building dbr:Joseph_Horatio_Anderson }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is olusola momoh spouse of humphrey iv of toron ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Humphrey_IV_of_Toron dbo:spouse dbr:Olusola_Momoh },ask where{dbr:Humphrey_IV dbo:spouse dbr:Olusola_Momoh }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the philosophicalSchool of the crisis of european sciences and transcendental phenomenology's author ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:The_Crisis_of_European_Sciences_and_Transcendental_Phenomenology dbo:author ?x1 . ?x1 dbo:philosophicalSchool ?x },select?x where{dbr:The_Crisis_of_European_Sciences_and_Transcendental_Phenomenology dbo:author?x1.?x1 dbo:philosophicalSchool?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the kingdom of anjumania ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Anjumania dbo:kingdom ?x },select?x where{dbr:Anjumania dbo:kingdom?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the ranking of s.j. quinney college of law and university of cincinnati college of law ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:University_of_Cincinnati_College_of_Law dbo:ranking ?x . dbr:S.J._Quinney_College_of_Law dbo:ranking ?x },select?x where{dbr:S.J._Quinney_College_of_Law dbo:ranking?x. dbr:University_of_Cincinnati_College_of_Law dbo:ranking?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is the population in angela merici's beatified place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Angela_Merici dbo:beatifiedPlace ?x1 . ?x1 dbo:populationAsOf ?x },select?x where{dbr:Angela_Merici dbo:beatifiedPlace?x1.?x1 dbo:population?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the capacity factor of braidwood nuclear generating station and comanche solar project ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Braidwood_Nuclear_Generating_Station dbo:capacityFactor ?x . dbr:Comanche_Solar_Project dbo:capacityFactor ?x },select?x where{dbr:Braidwood_Nuclear_Generating_Station dbo:capacityFactor?x. dbr:Comanche_Solar_Project dbo:capacityFactor?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Are k251bs repeaters the same as wmwx ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:WMWX dbo:broadcastRepeater dbr:K251BS },ask where{dbr:WMWX dbo:repeaters dbr:K251BS }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is salla disease geneReviewsId of birt–hogg–dubé syndrome ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Birt–Hogg–Dubé_syndrome dbo:geneReviewsId dbr:Salla_disease },ask where{dbr:Birt–Hogg–Dubé_syndrome dbo:geneReviewsId dbr:Salla_disease }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# What do huizhou dialect's languages mean in the population metro ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Huizhou_dialect dbo:spokenIn ?x1 . ?x1 dbo:populationMetro ?x },select?x where{dbr:Huizhou_dialect dbo:populationMetro?x1.?x1 dbo:language?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the founding places of seatgeek ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:SeatGeek dbo:foundationPlace ?x },select?x where{dbr:SeatGeek dbo:foundingPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the next event of fencing at the 1924 summer olympics – men's épée and tennis at the 1896 summer olympics – men's singles ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Fencing_at_the_1924_Summer_Olympics_–_Men's_épée dbo:nextEvent ?x . dbr:Tennis_at_the_1896_Summer_Olympics_–_Men's_singles dbo:nextEvent ?x },select?x where{dbr:Fencing_at_the_1924_Summer_Olympics_–_Men's_Epée dbo:nextEvent?x. dbr:Tennis_at_the_1896_Summer_Olympics_–_Men's_Singles dbo:nextEvent?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many area water did prairie township have in resonating with the sun ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select count(*) as ?x where{dbr:Prairie_Township,_Audrain_County,_Missouri dbo:areaWater ?x }",select count(*) as?x where{dbr:Prairie_Township dbo:areaWater?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many Dewey Decimal Classification did chicks and balances have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Chicks_and_Balances dbo:dcc ?x },select count(*) as?x where{dbr:Chicks_and_Balances dbo:deweyDecimalClassification?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the function of spaceplane rocket on lockheed martin x-33 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Lockheed_Martin_X-33 dbo:rocketFunction dbr:Spaceplane },select?x where{dbr:Lockheed_Martin_X-33 dbo:rocketFunction?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the SATCAT of kosmos 706 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Kosmos_706 dbo:satcat ?x },select?x where{dbr:Kosmos_706 dbo:satcat?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How would you link from a Wikipage to an external page on the no. 127 wing rcaf's airplane attack ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:No._127_Wing_RCAF dbo:aircraftAttack ?x1 . ?x1 dbo:wikiPageExternalLink ?x },select?x where{dbr:No._127_Wing_Rcaf dbo:aircraftAttack?x1.?x1 dbo:externalPage?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What was mary saran's spouse's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mary_Saran dbo:spouse ?x1 . ?x1 dbo:deathPlace ?x },select?x where{dbr:Mary_Saran dbo:spouse?x1.?x1 dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the UTC offset of cameron and castlefreke ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Castlefreke dbo:utcOffset ?x . dbr:Cameron,_West_Virginia dbo:utcOffset ?x }",select?x where{dbr:Cameron dbo:utcOffset?x. dbr:Castlefreke dbo:utcOffset?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What treatment is chronic thromboembolic pulmonary hypertension ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Chronic_thromboembolic_pulmonary_hypertension dbo:treatment ?x },select?x where{dbr:Chronic_thromboembolic_pulmonary_hypertension dbo:treatment?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did paul vi catholic high school have a testaverage ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Paul_VI_Catholic_High_School dbo:testaverage ?x },ask where{dbr:Paul_Vi_Catholic_High_School dbo:testAverage?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the membership of united world wrestling as well as episcopal conference of croatia ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:United_World_Wrestling dbo:membership ?x . dbr:Episcopal_Conference_of_Croatia dbo:membership ?x },select?x where{dbr:United_World_Wrestling dbo:membership?x. dbr:Episcopal_Conference_of_Croatia dbo:membership?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many date did 1862 new jersey gubernatorial election have and after ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:1862_New_Jersey_gubernatorial_election dbo:startDate ?x },select count(*) as?x where{dbr:1862_New_Jersey_Gubernatorial_Election dbo:endDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did carlos joseph have former team ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Carlos_Joseph dbo:formerTeam ?x },ask where{dbr:Carlos_Joseph dbo:formerTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How do you know the id for vat phou ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Vat_Phou dbo:id ?x },select?x where{dbr:Vat_Phou dbo:id?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the passenger per day of madison county transit ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Madison_County_Transit dbo:passengersPerDay ?x },select?x where{dbr:Madison_County_Transit dbo:passengerPerDay?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is quequechan club's significant building ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Quequechan_Club dbo:architect ?x1 . ?x1 dbo:significantBuilding ?x },select?x where{dbr:Quequechan_Club dbo:significantBuilding?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is guilleries's located ? What is the original name of guilleries's ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Guilleries dbo:locatedInArea ?x1 . ?x1 dbo:originalName ?x },select?x where{dbr:Guilleries dbo:locatedIn?x1.?x1 dbo:originalName?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the birthplace of robert fellowes's spouse ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Robert_Fellowes,_Baron_Fellowes dbo:spouse ?x1 . ?x1 dbo:birthPlace ?x }",select?x where{dbr:Robert_Fellowes dbo:spouse?x1.?x1 dbo:birthPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are subdivisions in tuskers women's cricket team's ground ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tuskers_women's_cricket_team dbo:ground ?x1 . ?x1 dbo:subdivision ?x },select?x where{dbr:Tuskers_Women's_Cricket_Team dbo:ground?x1.?x1 dbo:subdivision?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are media types of the golden bough and ancient arts of central asia ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:The_Golden_Bough dbo:mediaType ?x . dbr:Ancient_Arts_of_Central_Asia dbo:mediaType ?x },select?x where{dbr:Golden_Bough dbo:mediaType?x. dbr:Ancient_Arts_of_Central_Asia dbo:mediaType?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is blonde hair color of samantha hoopes ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Samantha_Hoopes dbo:hairColor Blonde },ask where{dbr:Samantha_Hoopes dbo:hairColor dbr:Blonde }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What collection does polin museum of the history of polish jews have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:POLIN_Museum_of_the_History_of_Polish_Jews dbo:collection ?x },select?x where{dbr:Polin_Museum_of_the_History_of_Polish_Jews dbo:collection?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is the founding date of cadair idris's located in area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Cadair_Idris dbo:locatedInArea ?x1 . ?x1 dbo:foundingDate ?x },select?x where{dbr:Cadair_Idris dbo:locatedInArea?x1.?x1 dbo:foundingDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is it true david lawrence College of ty harris ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ty_Harris dbo:college dbr:David_Lawrence_(basketball) },ask where{dbr:David_Lawrence_College_of_Ty_Harris dbo:college?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the niphargus timavi family ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Niphargus_timavi dbo:family ?x1 . ?x1 dbo:family ?x },select?x where{dbr:Niphargus_timavi dbo:family?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is ronnie biggs's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ronnie_Biggs dbo:deathPlace ?x1 . ?x1 dbo:country ?x },select?x where{dbr:Ronnie_Biggs dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is 33.0's bioavailability for biperiden ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Biperiden dbo:bioavailability 33.0 },select?x where{dbr:33.0 dbo:bioavailability?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did j. r. clynes have that many signatures ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:J._R._Clynes dbo:signature ?x },ask where{dbr:J._R._Clynes dbo:numberOfSignatures?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the beatified by both ignazia verzeri and lorenzo da ripafratta ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ignazia_Verzeri dbo:beatifiedBy ?x . dbr:Lorenzo_da_Ripafratta dbo:beatifiedBy ?x },select?x where{dbr:Ignazia_Verzeri dbo:beatifiedBy?x. dbr:Lorenzo_Da_Ripafratta dbo:beatifiedBy?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is robert hägg shoots of tom colley ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Tom_Colley dbo:shoots dbr:Robert_Hägg },ask where{dbr:Tom_Colley dbo:shoots dbr:Robert_Hägg }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# What is the county seat of cheatham county as well as cass county ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Cheatham_County,_Tennessee dbo:countySeat ?x . dbr:Cass_County,_Minnesota dbo:countySeat ?x }",select?x where{dbr:Cheatham_County dbo:countySeat?x. dbr:Cass_County dbo:countySeat?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the size of supermemo and paperport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:PaperPort dbo:fileSize ?x . dbr:SuperMemo dbo:fileSize ?x },select?x where{dbr:SuperMemo dbo:size?x. dbr:Paperport dbo:size?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the route numbers for r399 road and r399 road ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:R399_road_(Ireland) dbo:routeNumber ?x . dbr:R399_road_(Ireland) dbo:routeNumber ?x },select?x where{dbr:R399_road dbo:routeNumber?x. dbr:R399_road dbo:routeNumber?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is nationalore sex ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Nationalore dbo:sex ?x . <B> dbo:sex ?x },select?x where{dbr:Nationalore dbo:sex?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How good is oliver pough in nate leaman now ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Nate_Leaman dbo:currentRecord dbr:Oliver_Pough },select?x where{dbr:Oliver_Pough dbo:inNateLeaman?x1.?x1 dbo:good?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How do I find the height of rock island armory 1911 series ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Rock_Island_Armory_1911_series dbo:height ?x },select?x where{dbr:Rock_Island_Armory dbo:series?x1.?x1 dbo:height?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did university of kragujevac faculty of agronomy have number of doctoral students ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:University_of_Kragujevac_Faculty_of_Agronomy dbo:numberOfDoctoralStudents ?x },ask where{dbr:University_of_Kragujevac_Faculty_of_Agronomy dbo:numberOfDoctoralStudents?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is ammonifex degensii phylum of ammoniphilus oxalivorans ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ammoniphilus_oxalivorans dbo:phylum dbr:Ammonifex_degensii },ask where{dbr:Ammoniphilus_oxalivorans dbo:phylum dbr:Ammonifex_degensii }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# Who is crew member on sts-62-a and skylab 3 if he lives at home ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Skylab_3 dbo:crewMember ?x . dbr:STS-62-A dbo:crewMember ?x },select?x where{dbr:STS-62-A dbo:crewMember?x. dbr:SkyLab_3 dbo:crewMember?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is the beatified place of pompilio maria pirrotti ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Pompilio_Maria_Pirrotti dbo:beatifiedPlace ?x },select?x where{dbr:Pompilio_Maria_Pirrotti dbo:beatifiedPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the dissolution year of holy league ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Holy_League_(1684) dbo:dissolutionYear ?x },select?x where{dbr:Holy_League dbo:dissolutionYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How should I know broadcast repeater for wflf and kths ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:KTHS_(AM) dbo:broadcastRepeater ?x . dbr:WFLF_(AM) dbo:broadcastRepeater ?x },select?x where{dbr:WFLF dbo:broadcastRepeater?x. dbr:KTHS dbo:broadcastRepeater?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does cri du chat syndrome have an ORPHA ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Cri_du_chat_syndrome dbo:orpha ?x },ask where{dbr:Cri_du_chat_syndrome dbo:orpha?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are some of the aircraft trainers of the Air Force neall ellis ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Neall_Ellis dbo:militaryBranch ?x1 . ?x1 dbo:aircraftTrainer ?x },select?x where{dbr:Air_Force_Neall_Ellis dbo:aircraftTrainer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many routes abbreviation did m-78 have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:M-78_(Michigan_highway) dbo:routeTypeAbbreviation ?x },select count(*) as?x where{dbr:M-78 dbo:routeAbbreviation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is vermilion river's mouth situated ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Vermilion_River_(Louisiana) dbo:mouthPlace ?x1 . ?x1 dbo:areaLand ?x },select?x where{dbr:Vermilion_River dbo:mouth?x1.?x1 dbo:situation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is celebrity squares's presenter ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Celebrity_Squares dbo:presenter ?x1 . ?x1 dbo:relative ?x },select?x where{dbr:Celebrity_Squares dbo:presenter?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many ships did r.p. rithet reach in his maiden voyage ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:R.P._Rithet_(sternwheeler) dbo:maidenVoyage ?x },select count(*) as?x where{dbr:R._P._Rithet dbo:maidenVoyage?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who are the governing bodies of rod cless's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Rod_Cless dbo:deathPlace ?x1 . ?x1 dbo:governingBody ?x },select?x where{dbr:Rod_Cless dbo:deathPlace?x1.?x1 dbo:governingBody?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many volunteers are there at music for people and so others might eat ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:So_Others_Might_Eat dbo:numberOfVolunteers ?x . dbr:Music_for_People_(organization) dbo:numberOfVolunteers ?x },select count(*) as?x where{dbr:Music_for_People dbo:volunteers?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is alleged_ the damsire of eswarah ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Eswarah dbo:damsire dbr:Alleged_(horse) },ask where{dbr:Eswarah dbo:damsire dbr:Alleged_ }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Can you give me all training of leesa streifler with more than 10 number of undergraduate students ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{?x1 dbo:training dbr:Leesa_Streifler . ?x1 dbo:numberOfUndergraduateStudents ?x filter  (  ?x > 10  )  },select?x where{dbr:LeeSa_Streifler dbo:training?x1.?x1 dbo:numberOfUndergraduateStudents?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Why does uss schofield do ms rahal ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:MS_Rahal dbo:layingDown dbr:USS_Schofield },select?x where{dbr:USS_Schofield dbo:msRahal?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did crawler-transporter have weight ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Crawler-transporter dbo:weight ?x },ask where{dbr:Crawler_Transporter dbo:weight?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is tower hotel number of rooms of hotel shanker ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:Hotel_Shanker dbo:numberOfRooms dbr:Tower_Hotel,_London }",ask where{dbr:Hotel_Shanker dbo:numberOfRooms dbr:Tower_Hotel }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 29th legislature of albania last election date of podlaskie voivodeship sejmik ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Podlaskie_Voivodeship_Sejmik dbo:lastElectionDate dbr:29th_Legislature_of_Albania },ask where{dbr:Podlaskie_Voivodeship_Sejmik dbo:lastElectionDate dbr:29th_Legislature_of_Albania }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# Where is the subregion of linganore ava's is part of wine region ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Linganore_AVA dbo:isPartOfWineRegion ?x1 . ?x1 dbo:subregion ?x },select?x where{dbr:Linganore_AVA dbo:isPartOfWineRegion?x1.?x1 dbo:subregion?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did gergana slavcheva have a pick in a 2016 draft ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Gergana_Slavcheva dbo:draftPick ?x },ask where{dbr:Gergana_Slavcheva dbo:pickInA2016Draft?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the job of all gall is divided and maigret and the headless corpse translator ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:All_Gall_is_Divided dbo:translator ?x . dbr:Maigret_and_the_Headless_Corpse dbo:translator ?x },select?x where{dbr:All_Gall_Is_Divided dbo:job?x. dbr:Maigret_and_the_Headless_Corpse_Translator dbo:job?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the alma maters of sander vanocur and bette cooper ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Sander_Vanocur dbo:almaMater ?x . dbr:Bette_Cooper dbo:almaMater ?x },select?x where{dbr:Sander_Vanocur dbo:almaMater?x. dbr:Bette_Cooper dbo:almaMater?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which is the location of eqt partners ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:EQT_Partners dbo:locationCity ?x },select?x where{dbr:EQT_Partners dbo:location?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many drivers were on 1991 portuguese grand prix last night ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:1991_Portuguese_Grand_Prix dbo:secondDriver ?x },select count(*) as?x where{dbr:1991_Portuguese_Grand_Prix dbo:driver?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is the location of hmas anzac's homeport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:HMAS_Anzac_(FFH_150) dbo:homeport ?x1 . ?x1 dbo:location ?x },select?x where{dbr:Hmas_Anzac dbo:homeport?x1.?x1 dbo:location?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who was the great 66th armoured regiment commander and why ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:66th_Armoured_Regiment_(India) dbo:notableCommander ?x },select?x where{dbr:66th_Armoured_Regiment dbo:commander?x1.?x1 dbo:great?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the mouth place of brăila bridge ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Brăila_Bridge dbo:crosses ?x1 . ?x1 dbo:mouthPlace ?x },select?x where{dbr:Brăila_Bridge dbo:mouthPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many first race did josé dolhem have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:José_Dolhem dbo:firstRace ?x },select count(*) as?x where{dbr:José_Dolhem dbo:firstRace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the highest mountain ranges in the world ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{<A> dbo:highest ?x1 . ?x1 dbo:mountainRange ?x },select?x where{dbr:High_Mountain_Ranges dbo:highestMountainRange?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is currentseason of league of ireland premier division abkhazian premier league ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:League_of_Ireland_Premier_Division dbo:currentSeason dbr:Abkhazian_Premier_League },ask where{dbr:League_of_Ireland_Premier_Division_Abkhazian_Premier_League dbo:currentSeason?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Has manwich created any dish ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Manwich dbo:creatorOfDish ?x },ask where{dbr:Manwich dbo:createdDish?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did museum covered bridge have United States National Bridge ID ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Museum_Covered_Bridge dbo:unitedStatesNationalBridgeId ?x },ask where{dbr:Museum_Covered_Bridge dbo:unitedStatesNationalBridgeID?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did chris anderson have a college ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Chris_Anderson_(golfer) dbo:college ?x },ask where{dbr:Chris_Anderson dbo:college?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many neighboring municipality did ried-brig have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Ried-Brig dbo:neighboringMunicipality ?x },select count(*) as?x where{dbr:Ried-Brig dbo:neighboringMunicipality?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the page length of wiki page of rudolf von delbrück's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Rudolf_von_Delbrück dbo:deathPlace ?x1 . ?x1 dbo:wikiPageLength ?x },select?x where{dbr:Rudolf_Von_Delbrück dbo:deathPlace?x1.?x1 dbo:wikiPageLength?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the current partner of nadezhda gorshkova and nika osipova ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Nadezhda_Gorshkova dbo:currentPartner ?x . dbr:Nika_Osipova dbo:currentPartner ?x },select?x where{dbr:Nadezhda_Gorshkova dbo:currentPartner?x. dbr:Nika_Osipova dbo:currentPartner?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the stanley_river_ River of somerset dam the only one ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Somerset_Dam dbo:river dbr:Stanley_River_(Queensland) },ask where{dbr:Somerset_dam dbo:river dbr:Stanley_river_ }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the third driver of 2012 indian grand prix and 2016 buenos aires eprix ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:2012_Indian_Grand_Prix dbo:thirdDriver ?x . dbr:2016_Buenos_Aires_ePrix dbo:thirdDriver ?x },select?x where{dbr:2012_Indian_Grand_Prix dbo:thirdDriver?x. dbr:2016_Buenos_Aires_Eprix dbo:thirdDriver?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When will nhl on abc release their latest work ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:NHL_on_ABC dbo:previousWork ?x1 . ?x1 dbo:releaseDate ?x },select?x where{dbr:NHL_on_ABC dbo:latestWork?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did 99942 apophis have any temperature ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:99942_Apophis dbo:temperature ?x },ask where{dbr:99942_Apophis dbo:temperature?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did ZYZ have periapsis ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{<A> dbo:periapsis ?x },ask where{dbr:ZYZ dbo:periapsis?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many cities did bland county have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select count(*) as ?x where{dbr:Bland_County,_Virginia dbo:largestCity ?x }",select count(*) as?x where{dbr:Bland_County dbo:city?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What ethnic group of susu language's are spoken in and how is they spoken ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Susu_language dbo:spokenIn ?x1 . ?x1 dbo:ethnicGroup ?x },select?x where{dbr:Susu_language dbo:spokenIn?x1.?x1 dbo:ethnicGroup?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many fate did george england and co. have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:George_England_and_Co. dbo:fate ?x },select count(*) as?x where{dbr:George_England dbo:fate?x. dbr:Co dbo:fate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many prospects league did philippe desrosiers have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Philippe_Desrosiers dbo:prospectLeague ?x },select count(*) as?x where{dbr:Philippe_Desrosiers dbo:prospectLeague?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does koolewong railway station visitor statistics were the lowest of the north strathfield railway station. ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:North_Strathfield_railway_station dbo:visitorStatisticsAsOf dbr:Koolewong_railway_station },ask where{dbr:Koolewong_railway_station dbo:visitorStatistics dbr:North_Strathfield_railway_station }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many populations of urban were there in old parish ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Old_Parish dbo:populationUrban ?x },select count(*) as?x where{dbr:Old_Parish dbo:population?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the emedicine topic of gastrointestinal bleeding polycystic kidney disease ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Polycystic_kidney_disease dbo:eMedicineTopic ?x . dbr:Gastrointestinal_bleeding dbo:eMedicineTopic ?x },select?x where{dbr:Gastrointestinal_bleeding_polycystic_kidney_disease dbo:eMedicineTopic?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Why did windham hill records come with a distributing label ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Windham_Hill_Records dbo:distributingLabel ?x },ask where{dbr:Windham_Hill_Records dbo:distributingLabel?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is miss julie a character in play ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Miss_Julie dbo:characterInPlay ?x },ask where{dbr:Miss_Julie dbo:characterInPlay?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many homeport did ins kesari have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:INS_Kesari_(2005) dbo:homeport ?x },select count(*) as?x where{dbr:Ins_Kesari dbo:homeport?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the diseasesDB of glioblastoma's gastrointestinal stromal tumor ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Glioblastoma dbo:diseasesDB ?x . dbr:Gastrointestinal_stromal_tumor dbo:diseasesDB ?x },select?x where{dbr:Glioblastoma dbo:gastrointestinalStromalTumor?x1.?x1 dbo:diseasesDB?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did carre's grammar school have national ranking ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Carre's_Grammar_School dbo:nationalRanking ?x },ask where{dbr:Carre's_Grammar_School dbo:nationalRanking?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did the company liberty bridge have maintained by ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Liberty_Bridge_(Pittsburgh) dbo:maintainedBy ?x },ask where{dbr:Liberty_Bridge dbo:maintainedBy?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the year ford focus model started out with ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Ford_Focus_(first_generation) dbo:modelStartYear ?x },select?x where{dbr:Ford_Focus_Model dbo:startedWith?x1.?x1 dbo:year?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the associated musical artist of could it be any harder's performer ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Could_It_Be_Any_Harder dbo:artist ?x1 . ?x1 dbo:associatedMusicalArtist ?x },select?x where{dbr:Could_It_Be_Any_Harder dbo:artist?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the EC number of polyphenol oxidase and gdp-fucose protein o-fucosyltransferase 1 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Polyphenol_oxidase dbo:ecNumber ?x . dbr:GDP-fucose_protein_O-fucosyltransferase_1 dbo:ecNumber ?x },select?x where{dbr:Polyphenol_oxidase dbo:ec?x. dbr:GDP-Fucose_protein_o-Fucosyltransferase_1 dbo:ec?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the swifts garrison of berkuts in existence ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Berkuts dbo:garrison dbr:Swifts_(aerobatic_team) },ask where{dbr:Berkuts dbo:swiftsGarrison?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the maximum elevation of santo tomas ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Santo_Tomas,_Batangas dbo:maximumElevation ?x }",select?x where{dbr:Santo_Tomas dbo:maximumElevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the height above average terrain wnnh ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:WNNH dbo:heightAboveAverageTerrain ?x },select?x where{dbr:WNNH dbo:heightAboveAverageTerrain?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What's joseph déjacque's death place anthem and why ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Joseph_Déjacque dbo:deathPlace ?x1 . ?x1 dbo:anthem ?x },select?x where{dbr:Joseph_Déjacque dbo:deathPlace?x1.?x1 dbo:anthem?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many ceeb did acorn high school have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Acorn_High_School dbo:ceeb ?x },select count(*) as?x where{dbr:Acorn_High_School dbo:ceeb?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What was the last release date for imazing ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:IMazing dbo:latestReleaseDate ?x },select?x where{dbr:Imazing dbo:lastReleaseDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is escadron de chasse et d'expérimentation 1/30 côte d'argent garrison of airman apprenticeship training school in any sense ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Airman_Apprenticeship_Training_School dbo:garrison dbr:Escadron_de_chasse_et_d'expérimentation_1/30_Côte_d'Argent },ask where{dbr:Airman_Apprenticeship_Training_School dbo:garrison dbr:Escadron_de_Chasse_et_d'expérimentation_1/30_côte_d'Argent }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is dummy ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Dummy_(1979_film) dbo:person ?x },select?x where{dbr:Dummy?x1.?x1 dbo:isDummy?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is u street station u street station passenger per year of willow springs station ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Willow_Springs_station_(Illinois) dbo:passengersPerYear dbr:U_Street_station },ask where{dbr:Willow_Springs_Station dbo:passengerPerYear dbr:U_Street_Station }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is semih saygıner sport country of paul mifsud ? Is it in the same country ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Paul_Mifsud dbo:sportCountry dbr:Semih_Saygıner },ask where{dbr:Paul_Mifsud dbo:sportCountry dbr:Semih_Saygıner }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# What are the advantages of sohc valvetrain in nissan rd engine ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Nissan_RD_engine dbo:valvetrain SOHC },select?x where{dbr:SoHC_Valvetrain dbo:engine?x1.?x1 dbo:advantages?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is kantipur chief editor of haugesunds avis ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Haugesunds_Avis dbo:chiefEditor dbr:Kantipur_(daily) },ask where{dbr:Haugesunds_Avis dbo:chiefEditor dbr:Kantipur }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the architect of croxson house ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Croxson_House dbo:architect ?x . <B> dbo:architect ?x },select?x where{dbr:Croxson_House dbo:architect?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is chamamé have stylistic origin ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Chamamé dbo:stylisticOrigin ?x },ask where{dbr:Chamamé dbo:stylisticOrigin?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is antianeira mythology ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Antianeira_(daughter_of_Menetes) dbo:mythology ?x },select?x where{dbr:Antianeira_mythology dbo:antigen?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is taiyaba majumder the Mother of khaleda zia ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Khaleda_Zia dbo:mother dbr:Taiyaba_Majumder },ask where{dbr:Khaleda_Zia dbo:mother dbr:Taiyaba_Majumder }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# Is pericastor mythology of aeneus ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Aeneus_(of_Aenus) dbo:mythology dbr:Pericastor },ask where{dbr:Aeneus dbo:mythology dbr:Pericastor }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many growing grape did ribbon ridge ava have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Ribbon_Ridge_AVA dbo:growingGrape ?x },select count(*) as?x where{dbr:Ribbon_Ridge_AVA dbo:growingGrape?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the leader party of marklohe as well as schliersee ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Marklohe dbo:leaderParty ?x . dbr:Schliersee dbo:leaderParty ?x },select?x where{dbr:Marklohe dbo:leaderParty?x. dbr:Schliersee dbo:leaderParty?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the political party in legislature of louisiana state legislature as well as waltham forest london borough council ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Louisiana_State_Legislature dbo:politicalPartyInLegislature ?x . dbr:Waltham_Forest_London_Borough_Council dbo:politicalPartyInLegislature ?x },select?x where{dbr:Louisiana_State_Legislature dbo:politicalParty?x. dbr:Waltham_Forest_London_Borough_Council dbo:politicalParty?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the fighter jet recon david atcherley's military branch ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:David_Atcherley dbo:militaryBranch ?x1 . ?x1 dbo:aircraftRecon ?x },select?x where{dbr:David_Atcherley dbo:militaryBranch?x1.?x1 dbo:fighterJetRecon?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the result of constantius ii's siege of bezabde and battle of quatre bras ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Constantius_II's_siege_of_Bezabde dbo:result ?x . dbr:Battle_of_Quatre_Bras dbo:result ?x },select?x where{dbr:Constantius_II dbo:siege?x. dbr:Battle_of_Quatre_Bras dbo:siege?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the narrows Dewey Decimal Classification of the siege of macindaw ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:The_Siege_of_Macindaw dbo:dcc dbr:The_Narrows_(Connelly_novel) },select?x where{dbr:Siege_of_Macindaw dbo:narrowDeweyDecimalClassification?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many employers did apoorva mandavilli have, in all industries ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Apoorva_Mandavilli dbo:employer ?x },select count(*) as?x where{dbr:Apoorva_Mandavilli dbo:employer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the length of uss voyager ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:USS_Voyager_(SP-361) dbo:length ?x },select?x where{dbr:USS_Voyager dbo:length?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What's the maximum elevation of finish what ya started's recorded in ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Finish_What_Ya_Started dbo:recordedIn ?x1 . ?x1 dbo:maximumElevation ?x },select?x where{dbr:Finish_What_Ya_Started dbo:recordedIn?x1.?x1 dbo:maximumElevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the bicycle information of goraleigh's important station ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:GoRaleigh dbo:importantStation ?x1 . ?x1 dbo:bicycleInformation ?x },select?x where{dbr:Goraleigh dbo:importantStation?x1.?x1 dbo:bicycleInformation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Why is it that yoruba language has ISO 639-3 code ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Yoruba_language dbo:iso6393Code ?x },select?x where{dbr:Yoruba_language dbo:iso6393Code?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the call sign meaning of wgvu ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:WGVU_(AM) dbo:callsignMeaning ?x },select?x where{dbr:WGVU dbo:callsignMeaning?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How is the difference between the outflows of lake ontario and wickiup reservoir calculated ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Lake_Ontario dbo:outflow ?x . dbr:Wickiup_Reservoir dbo:outflow ?x },select?x where{dbr:Lake_Ontario dbo:outflow?x. dbr:Wickiup_Reservoir dbo:outflow?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many teams have existed since dave bartosch opened their debut album ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Dave_Bartosch dbo:debutTeam ?x },select count(*) as?x where{dbr:Dave_Bartosch dbo:debutAlbum?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many wars, if any, has toropets–kholm offensive been involved in ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Toropets–Kholm_offensive dbo:isPartOfMilitaryConflict ?x1 . ?x1 dbo:isPartOfMilitaryConflict ?x },select count(*) as?x where{dbr:Toropets–Kholm dbo:offensive?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is the area water of kjac's broadcast area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:KJAC dbo:broadcastArea ?x1 . ?x1 dbo:areaWater ?x },select?x where{dbr:Kjac dbo:broadcastArea?x1.?x1 dbo:areaWater?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# nan
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{<A> dbo:iso6393Code ?x },select?x where{dbr:Nan_(computer) dbo:operatingSystem?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is transantiagobuses other serving lines of san josé de la estrella metro station ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:San_José_de_la_Estrella_metro_station dbo:otherServingLines Transantiagobuses },ask where{dbr:San_José_de_La_Estrella_Metro_station dbo:otherServingLines dbr:Transantiagobuses }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What water should be in hickory creek's mouth ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Hickory_Creek_(White_River,_Madison_County,_Arkansas) dbo:mouthPlace ?x1 . ?x1 dbo:areaWater ?x }",select?x where{dbr:Hickory_Creek dbo:mouth?x1.?x1 dbo:water?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the movement of mark tobey (or its relation) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mark_Tobey dbo:movement ?x },select?x where{dbr:Mark_Tobey dbo:movement?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the absolute magnitude of 3714 kenrussell ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:3714_Kenrussell dbo:absoluteMagnitude ?x },select?x where{dbr:3714_Kenrussell dbo:absoluteMagnitude?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is sporomusa ovata's family Colour Name ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Sporomusa_ovata dbo:family ?x1 . ?x1 dbo:colourName ?x },select?x where{dbr:Sporomusa_ovata dbo:family?x1.?x1 dbo:colourName?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When was henry percy's death date ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Henry_Percy,_1st_Earl_of_Northumberland dbo:deathPlace ?x1 . ?x1 dbo:date ?x }",select?x where{dbr:Henry_Percy dbo:deathPlace?x1.?x1 dbo:deathDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the ship beams on bay-class minesweeper ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Bay-class_minesweeper dbo:shipBeam ?x },select?x where{dbr:Bay_Class_Minesweeper dbo:shipBeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the rail gauge of disney resort line ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Disney_Resort_Line dbo:railGauge ?x },select?x where{dbr:Disney_Resort_Line dbo:railGauge?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is asuransi jasindo serves indonesia region ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Asuransi_Jasindo dbo:regionServed dbr:Indonesia },ask where{dbr:Asuransi_Jasindo dbo:indonesiaRegion?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What's the youth wing of new zealand national party and fidesz ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:New_Zealand_National_Party dbo:youthWing ?x . dbr:Fidesz dbo:youthWing ?x },select?x where{dbr:New_Zealand_National_Party dbo:youthWing?x. dbr:Fidesz dbo:youthWing?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many broadcast network did kuhf have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:KUHF dbo:broadcastNetwork ?x1 . ?x1 dbo:broadcastNetwork ?x },select count(*) as?x where{dbr:Kuhf dbo:broadcastNetwork?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is this blessings and other be-bop high school projects before ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Be-Bop_High_School_(song) dbo:previousWork dbr:Blessings_(TV_series) },ask where{dbr:Blessings_and_Other_BE-BOP_High_School dbo:projectBefore?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is green party the European association of voice – social democracy ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Voice_–_Social_Democracy dbo:europeanAffiliation dbr:Green_Party_(Romania) },ask where{dbr:Green_Party dbo:europeanAssociationOfVoice–Social_democracy?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 1947 hall of fame of frank nighbor ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Frank_Nighbor dbo:hallOfFame 1947 },ask where{dbr:Frank_Nighbor dbo:hallOfFame dbr:1947 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the first race in bertil roos ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Bertil_Roos dbo:firstRace ?x },select?x where{dbr:Bertil_Roos dbo:firstRace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the ingredient of kimchi as well as jell-o ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Kimchi dbo:ingredient ?x . dbr:Jell-O dbo:ingredient ?x },select?x where{dbr:Kimchi dbo:ingredient?x. dbr:Jell-o dbo:ingredient?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many command structure did 856 naval air squadron have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:856_Naval_Air_Squadron dbo:commandStructure ?x1 . ?x1 dbo:commandStructure ?x },select count(*) as?x where{dbr:856_Naval_Air_Squadron dbo:commandStructure?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did 1896 u.s. national championships really have a champion in double female ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:1896_U.S._National_Championships_(tennis) dbo:championInDoubleFemale ?x },ask where{dbr:1896_U.S._National_Championships dbo:championInDoubleFemale?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did jenni sidey-gibbons have a selection ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Jenni_Sidey-Gibbons dbo:selection ?x },ask where{dbr:Jenni_Sidey-Gibbons dbo:selection?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the death year of ben maddow ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Ben_Maddow dbo:deathYear ?x },select?x where{dbr:Ben_Maddow dbo:deathYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is bill woodcock's birth place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Bill_Woodcock dbo:birthPlace ?x1 . ?x1 dbo:areaMetro ?x },select?x where{dbr:Bill_Woodcock dbo:birthPlace?x1.?x1 dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the country of rnlb queen victoria's homeport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:RNLB_Queen_Victoria dbo:homeport ?x1 . ?x1 dbo:country ?x },select?x where{dbr:RNLB_Queen_Victoria dbo:homeport?x1.?x1 dbo:country?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many students was carlucci american international school of lisbon ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Carlucci_American_International_School_of_Lisbon dbo:numberOfStudents ?x },select count(*) as?x where{dbr:Carlucci_American_International_School_of_Lisbon dbo:numberOfStudents?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is hd 181433 d average speed of 77 frigga ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:77_Frigga dbo:averageSpeed dbr:HD_181433_d },ask where{dbr:77_Frigga dbo:averageSpeed dbr:HD_181433 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many events did 2014 knvb cup final have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:2014_KNVB_Cup_Final dbo:previousEvent ?x },select count(*) as?x where{dbr:2014_KnVB_Cup_Final dbo:event?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 497763.0 campus size of university school of milwaukee ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:University_School_of_Milwaukee dbo:campusSize 497763.0 },ask where{dbr:University_School_of_Milwaukee dbo:campusSize 497763.0 }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# How many sizes does files have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Files_(Google) dbo:fileSize ?x },select count(*) as?x where{dbr:Files dbo:size?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many lawyers are in lewis roca rothgerber christie ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Lewis_Roca_Rothgerber_Christie dbo:numberOfLawyers ?x },select count(*) as?x where{dbr:Lewis_Roca_Rothgerber_Christie dbo:lawyer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is xeam-am sister station of wykb ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:WYKB dbo:sisterStation dbr:XEAM-AM },ask where{dbr:Wykb dbo:sisterStation dbr:Xeam-Am }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the all time gold medalist in the world championships of weightlifting at the 1960 summer olympics – men's 60 kg and why ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Weightlifting_at_the_1960_Summer_Olympics_–_Men's_60_kg dbo:goldMedalist ?x },select?x where{dbr:Weightlifting_at_the_1960_Summer_Olympics_–_Men's_60_kg dbo:goldMedalist?x. dbr:The_World_Championships_of_Weightlifting dbo:goldMedalist?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is at least 252 at least 252 number of deaths of military units to aid production ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Military_Units_to_Aid_Production dbo:numberOfDeaths At least 252 },ask where{dbr:Military_Units_to_Aid_Production dbo:numberOfDeaths dbr:252 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# nan
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{<A> dbo:firstAppearance ?x },select?x where{dbr:Nan_(computer) dbo:operatingSystem?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is romanian frigate regina maria top speed of sms s35 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:SMS_S35_(1914) dbo:topSpeed dbr:Romanian_frigate_Regina_Maria_(F222) },ask where{dbr:SMS_S35 dbo:reginaMariaTopSpeed dbr:Romanian_frigate }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How is the pulling network connected to castle News ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Castle_(season_4) dbo:network dbr:Pulling_(TV_series) },select?x where{dbr:Castle_News dbo:pullingNetwork?x1.?x1 dbo:connectedTo?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the conservation status system of dancea rodriguezensis and why is it so bad ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Dancea_rodriguezensis dbo:conservationStatusSystem ?x },select?x where{dbr:Dancea_rodriguezensis dbo:conservationStatusSystem?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did robert thach have death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Robert_Thach dbo:deathPlace ?x },ask where{dbr:Robert_Thach dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is technical death metal derivative of progressive metal ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Progressive_metal dbo:derivative dbr:Technical_death_metal },ask where{dbr:Technical_Death_Metal dbo:derivative dbr:Progressive_Metal }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What's the time zone of usns apache's homeport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:USNS_Apache_(T-ATF-172) dbo:homeport ?x1 . ?x1 dbo:timeZone ?x },select?x where{dbr:USNS_Apache dbo:homeport?x1.?x1 dbo:timeZone?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many number of pages did fugitive prince have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Fugitive_Prince dbo:numberOfPages ?x },select count(*) as?x where{dbr:Fugitive_Prince dbo:numberOfPages?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the aircraft recon of tennessee air national guard ? What is the history ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Tennessee_Air_National_Guard dbo:aircraftRecon ?x },select?x where{dbr:Tennessee_Air_National_Guard dbo:aircraftRecon?x1.?x1 dbo:history?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the maximum elevation of the middle of west creek’s mouth ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:West_Creek_(Pennsylvania) dbo:mouthPlace ?x1 . ?x1 dbo:maximumElevation ?x },select?x where{dbr:Middle_of_West_Creek dbo:mouth?x1.?x1 dbo:maximumElevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the beatified place of jakub strzemię as well as giulia crostarosa ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Jakub_Strzemię dbo:beatifiedPlace ?x . dbr:Giulia_Crostarosa dbo:beatifiedPlace ?x },select?x where{dbr:Jakub_Strzemię dbo:beatifiedPlace?x. dbr:Giulia_Crostarosa dbo:beatifiedPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What apprehended mehdi hashemi rafsanjani ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Mehdi_Hashemi_Rafsanjani dbo:apprehended ?x },select?x where{dbr:Mehdi_Hashemi_Rafsanjani dbo:apprehended?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is the first ever Air Date for hiru fm ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Hiru_FM dbo:firstAirDate ?x },select?x where{dbr:Hiru_FM dbo:firstAirDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many foal date did admire vega actually have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Admire_Vega dbo:foalDate ?x },select count(*) as?x where{dbr:Admire_Vega dbo:foalDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the leaderFunction of memphis river parks partnership and business professionals of america. ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Business_Professionals_of_America dbo:leaderFunction ?x . dbr:Memphis_River_Parks_Partnership dbo:leaderFunction ?x },select?x where{dbr:Memphis_River_Parks_Partnership dbo:leaderFunction?x. dbr:Business_Professionals_of_America dbo:leaderFunction?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many networks did rock monster have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Rock_Monster dbo:network ?x },select count(*) as?x where{dbr:Rock_Monster dbo:network?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is walter moore's endowment ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Walter_Moore_(politician) dbo:almaMater ?x1 . ?x1 dbo:endowment ?x },select?x where{dbr:Walter_Moore dbo:endowment?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 81 number of orbits of sts-48 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:STS-48 dbo:numberOfOrbits 81 },ask where{dbr:STS-48 dbo:numberOfOrbits dbr:81 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did srinagarind dam ever had a river ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Srinagarind_Dam dbo:river ?x },ask where{dbr:Srinagarind_dam dbo:river?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many ground did u.s. lecce do ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:U.S._Lecce dbo:ground ?x },select count(*) as?x where{dbr:U.S._Lecce dbo:ground?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many squad numbers did list of chinese football transfers summer 2018 have at the age of 21 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:List_of_Chinese_football_transfers_summer_2018 dbo:squadNumber ?x },select count(*) as?x where{dbr:List_of_Chinese_Football_Transfers_Summer_2018 dbo:squadNumber?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is the region served of edgar adams's club ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Edgar_Adams dbo:club ?x1 . ?x1 dbo:regionServed ?x },select?x where{dbr:Edgar_Adams dbo:club?x1.?x1 dbo:regionServed?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is magog river's mouth. The population metro ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Magog_River dbo:mouthPlace ?x1 . ?x1 dbo:populationMetro ?x },select?x where{dbr:Magog_River dbo:mouth?x1.?x1 dbo:populationMetro?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What do st edmund hall and complex of silesian international schools mean ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:St_Edmund_Hall,_Oxford dbo:principal ?x . dbr:Complex_of_Silesian_International_Schools dbo:principal ?x }",select?x where{dbr:St_Edmund_Hall dbo:complex?x. dbr:Silesian_International_Schools dbo:complex?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is cassola still a population ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Cassola dbo:populationAsOf ?x },ask where{dbr:Cassola dbo:population?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is richard hutton batting side ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Richard_Hutton_(cricketer) dbo:battingSide ?x },select?x where{dbr:Richard_Hutton dbo:battingSide?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the assets and liabilities of vernon building society ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Vernon_Building_Society dbo:assets ?x },select?x where{dbr:Vernon_Building_Society dbo:asset?x1.?x1 dbo:liability?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are fees of mount saint dominic academy ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Mount_Saint_Dominic_Academy dbo:fees ?x },select?x where{dbr:Mount_Saint_Dominic_Academy dbo:fee?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many lawyers are in roschier ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Roschier dbo:numberOfLawyers ?x },select count(*) as?x where{dbr:Roshier dbo:lawyer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is houston comets draft team of janeth arcain ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Janeth_Arcain dbo:draftTeam dbr:Houston_Comets },ask where{dbr:Janeth_Arcain dbo:draftTeam dbr:Houston_Comets }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# Is the mary_jane_kelly__restingplaceposition__1 resting place of mary jane kelly ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Mary_Jane_Kelly dbo:restingPlacePosition dbr:Mary_Jane_Kelly__restingPlacePosition__1 },ask where{dbr:Mary_Jane_Kelly dbo:restingPlacePosition dbr:Mary_Jane_Kelly__1 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the 3rd Commander of the 139th aero squadron Command Structure ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:139th_Aero_Squadron dbo:commandStructure ?x1 . ?x1 dbo:thirdCommander ?x },select?x where{dbr:139th_Aero_Squadron dbo:commandStructure?x1.?x1 dbo:thirdCommander?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the elands river river mouth of rivière aux outardes was born ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Rivière_aux_Outardes_(Saguenay_River_tributary) dbo:riverMouth dbr:Elands_River_(North_West) },ask where{dbr:Rivière_aux_outardes dbo:mouth dbr:Elands_river }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many rebuilder did south african class 6e1 have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select count(*) as ?x where{dbr:South_African_Class_6E1,_Series_4 dbo:rebuilder ?x }",select count(*) as?x where{dbr:South_African_Class_6E1 dbo:rebuilder?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does liberal democracy of slovenia have a youth wing ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Liberal_Democracy_of_Slovenia dbo:youthWing ?x },ask where{dbr:Liberal_Democracy_of_Slovenia dbo:youthWing?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did chile always have human development index ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Chile dbo:humanDevelopmentIndex ?x },ask where{dbr:Chile dbo:humanDevelopmentIndex?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many legislatures did italian republic have during the history of the country ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Italian_Republic_(Napoleonic) dbo:legislature ?x },select count(*) as?x where{dbr:Italian_Republic dbo:history?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the latest release version of action! (shoes/action!) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Shoes_(GUI_toolkit) dbo:latestReleaseVersion ?x . dbr:Action!_(programming_language) dbo:latestReleaseVersion ?x },select?x where{dbr:Action_(shoes) dbo:latestReleaseVersion?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What time zone is mindhola river’s mouth ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mindhola_River dbo:mouthPlace ?x1 . ?x1 dbo:timeZone ?x },select?x where{dbr:Mindhola_River dbo:mouth?x1.?x1 dbo:timeZone?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is mercedes-benz m22 engine's fuel system ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mercedes-Benz_M22_engine dbo:fuelSystem ?x },select?x where{dbr:Mercedes-Benz_M22 dbo:engine?x1.?x1 dbo:fuelSystem?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is gus bilirakis the father of the ali mirza safavi ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ali_Mirza_Safavi dbo:father dbr:Gus_Bilirakis },ask where{dbr:Gus_Bilirakis dbo:father dbr:Ali_Mirza_Safavi }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the alma mater of red water's person ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Red_Water dbo:person ?x1 . ?x1 dbo:almaMater ?x },select?x where{dbr:Red_Water dbo:person?x1.?x1 dbo:almaMater?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the number of lanes of bayraklı tunnels and tromsøysund tunnel ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Bayraklı_Tunnels dbo:numberOfLanes ?x . dbr:Tromsøysund_Tunnel dbo:numberOfLanes ?x },select?x where{dbr:Bayraklı_Tunnel dbo:numberOfLanes?x. dbr:Tromsøysund_Tunnel dbo:numberOfLanes?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did ss ancona have power type ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:SS_Ancona dbo:powerType ?x },ask where{dbr:SS_Ancona dbo:powerType?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is that true imperial japanese navy has an identification symbol ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Imperial_Japanese_Navy dbo:identificationSymbol ?x },ask where{dbr:That_True_Imperial_Japanese_Navy dbo:identificationSymbol?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the meaning of .invalid reference of .ae ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:.ae dbo:reference dbr:.invalid },select?x where{dbr:.invalid_reference dbo:meaning?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many destination did select bus service have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Select_Bus_Service dbo:destination ?x },select count(*) as?x where{dbr:Select_Bus_Service dbo:destination?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the signature of justin trudeau ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Justin_Trudeau dbo:signature ?x },select?x where{dbr:Justin_Trudeau dbo:signature?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What city is the wcwp broadcast area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:WCWP dbo:broadcastArea ?x1 . ?x1 dbo:cityType ?x },select?x where{dbr:WCWP dbo:broadcastArea?x1.?x1 dbo:city?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the width of amelia womack's birthplace ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Amelia_Womack dbo:birthPlace ?x1 . ?x1 dbo:width ?x },select?x where{dbr:Amelia_Womack dbo:birthPlace?x1.?x1 dbo:width?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who are alumni of hoërskool bellville ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Hoërskool_Bellville dbo:rivalSchool ?x1 . ?x1 dbo:alumni ?x },select?x where{dbr:Hoërskool_Bellville dbo:alumni?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the saint of the spoleto ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Spoleto dbo:saint ?x },select?x where{dbr:Saint_of_the_Spoleto dbo:spouse?x1.?x1 dbo:spouse?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is ama language ISO 639-3 code of hiligaynon language or IAS 659-7 code of ama language ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Hiligaynon_language dbo:iso6393Code dbr:Ama_language_(New_Guinea) },ask where{dbr:Hiligaynon_language dbo:iso6393Code dbr:Ama_language }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How do I figure out 46 floor count of a wisma 46 tape ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Wisma_46 dbo:floorCount 46 },select?x where{dbr:Wisma_46_Tape dbo:floorCount?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When was shooting at the 1924 summer olympics – men's team trap's death date ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Shooting_at_the_1924_Summer_Olympics_–_Men's_team_trap dbo:bronzeMedalist ?x1 . ?x1 dbo:deathDate ?x },select?x where{dbr:Shooting_at_the_1924_Summer_Olympics_–_Men's_Team_Trap dbo:deathDate?x1.?x1 dbo:year?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is there anyone who is the broadcast translator for wnil and wlaf ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:WLAF_(AM) dbo:broadcastTranslator ?x . dbr:WNIL dbo:broadcastTranslator ?x },ask where{dbr:WLAF dbo:broadcastTranslator?x. dbr:WNIL dbo:broadcastTranslator?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did karun-3 dam have river ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Karun-3_Dam dbo:river ?x },ask where{dbr:Karun-3_dam dbo:river?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many ICD9 does kawasaki disease use ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Kawasaki_disease dbo:icd9 ?x },select count(*) as?x where{dbr:Kawasaki_disease dbo:icd9?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many doctoral students in roger adams did roger adams have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Roger_Adams dbo:doctoralStudent ?x },select count(*) as?x where{dbr:Roger_Adams dbo:doctoralStudent?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are some examples of albedo and flex of 14627 emilkowalski and 4547 massachusetts as an equation ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:14627_Emilkowalski dbo:albedo ?x . dbr:4547_Massachusetts dbo:albedo ?x },select?x where{dbr:14627_Emilkowalski dbo:albedo?x. dbr:4547_Massachusetts dbo:albedo?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many other former team members did rod wishart have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Rod_Wishart dbo:formerTeam ?x },select count(*) as?x where{dbr:Rod_Wishart dbo:formerTeamMember?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many runtimes has sawal 700 crore dollar ka ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Sawal_700_Crore_Dollar_Ka dbo:runtime ?x },select count(*) as?x where{dbr:Sawal_700_Crore_Dollar_Ka dbo:runtime?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many magazine did otomen have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Otomen dbo:magazine ?x },select count(*) as?x where{dbr:Otomen dbo:magazine?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is big comic magazine hidamari no ki ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Hidamari_no_Ki dbo:magazine dbr:Big_Comic },ask where{dbr:Big_Comic_Magazine dbo:hidamariNoKi }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is north american airlines an punto azul airport ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Punto_Azul dbo:targetAirport dbr:North_American_Airlines },ask where{dbr:North_American_Airlines dbo:punto_azul_airport?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the fastest driver team of 2015 hungarian grand prix ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:2015_Hungarian_Grand_Prix dbo:fastestDriverTeam ?x },select?x where{dbr:2015_Hungarian_Grand_Prix dbo:fastestDriverTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the elk lake inflow ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Elk_Lake_(Michigan) dbo:inflow ?x1 . ?x1 dbo:inflow ?x },select?x where{dbr:Elk_Lake dbo:inflow?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is the year of electrification of the b's route end ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:B_(S-train) dbo:routeEnd ?x1 . ?x1 dbo:yearOfElectrification ?x },select?x where{dbr:B_Route_End dbo:electrificationYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the Throwing sides of carlos yoshimura ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Carlos_Yoshimura dbo:throwingSide ?x },select?x where{dbr:Carlos_Yoshimura dbo:throwingSide?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is BBR of edgar jones ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Edgar_Jones_(basketball) dbo:bbr ?x },select?x where{dbr:Edgar_Jones dbo:bbr?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which is the best automobile platform of toyota yaris lincoln ls ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Toyota_Yaris_(XP150) dbo:automobilePlatform dbr:Lincoln_LS },select?x where{dbr:Toyota_Yaris_Lincoln_LS dbo:bestAutomobilePlatform?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is tesco_pearl actually the dam of ines fujin ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ines_Fujin dbo:dam dbr:Tesco_Pearl },ask where{dbr:Ines_Fujin dbo:dam dbr:Tesco_Pearl }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# What is the assets of banco nacional de costa rica and limoneira ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Banco_Nacional_de_Costa_Rica dbo:assets ?x . dbr:Limoneira dbo:assets ?x },select?x where{dbr:Banco_Nacional_de_Costa_Rica dbo:assets?x. dbr:Limoneira dbo:assets?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the Lieutenancy Area for belmont and ardonald ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","select ?x where{dbr:Ardonald dbo:lieutenancyArea ?x . dbr:Belmont,_Ayr dbo:lieutenancyArea ?x }",select?x where{dbr:Belmont dbo:lieutenancyArea?x. dbr:Ardonald dbo:lieutenancyArea?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the discipline of faemino–faema as well as tavfer–measindot–mortágua ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Faemino–Faema dbo:discipline ?x . dbr:Tavfer–Measindot–Mortágua dbo:discipline ?x },select?x where{dbr:Faemino–faema dbo:discipline?x. dbr:Tavfer–measindot–mortágua dbo:discipline?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is david cantine movement of alighiero boetti ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Alighiero_Boetti dbo:movement dbr:David_Cantine },ask where{dbr:Alighiero_Boetti dbo:movement dbr:David_Cantine }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# In what eMedicine subjects did polio have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Polio dbo:eMedicineSubject ?x },select?x where{dbr:Polio dbo:eMedicineSubject?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who was the writer of a theory of justice: the musical!'s based on ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:A_Theory_of_Justice:_The_Musical! dbo:basedOn ?x1 . ?x1 dbo:author ?x },select?x where{dbr:A_Theory_of_Justice:_The_Musical! dbo:basedOn?x1.?x1 dbo:writer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did unstoppable. sean scully & the art of everything have a person ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Unstoppable._Sean_Scully_&_The_Art_of_Everything dbo:person ?x },ask where{dbr:Unstoppable._Sean_Scully_&_The_Art_of_Everything dbo:person?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Do you think soyuz ms-19 will have its next mission soon ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Soyuz_MS-19 dbo:nextMission ?x },ask where{dbr:Soyuz_MS-19 dbo:nextMission?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the school for seychelles's official language ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Seychelles dbo:officialLanguage ?x1 . ?x1 dbo:languageRegulator ?x },select?x where{dbr:Seychelles dbo:officialLanguage?x1.?x1 dbo:school?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is antonín viktor barvitius having significant building ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Antonín_Viktor_Barvitius dbo:significantBuilding ?x },ask where{dbr:Antonín_Viktor_Barvitius dbo:significantBuilding?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is russian foundation for advanced research projects in the defense industry a parent of fleet weather center san diego ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Fleet_Weather_Center_San_Diego dbo:parentOrganisation dbr:Russian_Foundation_for_Advanced_Research_Projects_in_the_Defense_Industry },ask where{dbr:Fleet_Weather_Center_San_Diego dbo:parent dbr:Russian_Foundation_for_Advanced_Research_Projects_in_the_Defense_Industry }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When was hr 2562 b discovered ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:HR_2562_b dbo:discovered ?x },select?x where{dbr:HR_2562_B dbo:discovered?x1.?x1 dbo:year?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is w219dt broadcast translator of wajc TV ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:WAJC dbo:broadcastTranslator W219DT(91.7 MHz,North Branch, Minnesota) }",ask where{dbr:Wajc_TV dbo:broadcastTranslator dbr:W219DT }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the license of solid converter pdf or msav ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Solid_Converter_PDF dbo:license ?x . dbr:MSAV dbo:license ?x },select?x where{dbr:Solid_Converter_PDF dbo:license?x. dbr:MSAV dbo:license?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did sheffield star have sister newspaper ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Sheffield_Star dbo:sisterNewspaper ?x },ask where{dbr:Sheffield_Star dbo:sisterNewspaper?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is calhoun county the largest city ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{<B> dbo:largestCity dbr:Calhoun_County,_Florida }",ask where{dbr:Calhoun_County dbo:largestCity?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the currency of round top's located in area ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Round_Top dbo:locatedInArea ?x1 . ?x1 dbo:currency ?x },select?x where{dbr:Round_Top dbo:locatedInArea?x1.?x1 dbo:currency?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did michael tolliver lives have ISBN (University of India) ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Michael_Tolliver_Lives dbo:isbn ?x },ask where{dbr:Michael_Tolliver_Lives dbo:isbn?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the predecessor of the slovak air force's aircraft attack ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Slovak_Air_Force dbo:aircraftAttack ?x1 . ?x1 dbo:predecessor ?x },select?x where{dbr:Slovak_Air_Force dbo:aircraftAttack?x1.?x1 dbo:predecessor?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did brenda k. sannes really have a residence on earth ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Brenda_K._Sannes dbo:residence ?x },ask where{dbr:Brenda_K._Sannes dbo:residenceOnEarth?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What area is around the <B> block ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Malerkotla dbo:areaUrban ?x . <B> dbo:areaUrban ?x },select?x where{dbr:The_Block dbo:area?x. <B> dbo:area?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Will bière had a canton ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Bière dbo:canton ?x },ask where{dbr:Bière dbo:canton?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 1 handicapped accessible of nubian station ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Nubian_station dbo:isHandicappedAccessible 1 },ask where{dbr:Nubian_station dbo:handicappedAccessible 1 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the number of stations of mumbai–hyderabad high-speed rail corridor and ålgård line ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mumbai–Hyderabad_high-speed_rail_corridor dbo:numberOfStations ?x . dbr:Ålgård_Line dbo:numberOfStations ?x },select?x where{dbr:Mumbai–Hyderabad_high-speed_rail_corridor dbo:numberOfStations?x. dbr:Ålgård_line dbo:numberOfStations?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did the nerve have editor's title ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:The_Nerve_(magazine) dbo:editorTitle ?x },ask where{dbr:The_Nerve dbo:editorTitle?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many foundation place did rambler have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Rambler_(portal) dbo:foundationPlace ?x },select count(*) as?x where{dbr:Rambler dbo:foundationPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Why does ping fu have a board in it ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ping_Fu dbo:board ?x },ask where{dbr:Ping_Fu dbo:board?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did empoli f.c. have the ground ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Empoli_F.C. dbo:ground ?x },ask where{dbr:Empoli_F._C. dbo:ground?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When are the order dates of uss delaware and usns walter s. diehl ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:USS_Delaware_(1776) dbo:orderDate ?x . dbr:USNS_Walter_S._Diehl_(T-AO-193) dbo:orderDate ?x },select?x where{dbr:USS_Delaware dbo:orderDate?x. dbr:USNS_Walter_S._Diehl dbo:orderDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many songs by the light princess did they have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:The_Light_Princess_(musical) dbo:musicBy ?x },select count(*) as?x where{dbr:The_Light_Princess dbo:song?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did hot lips has a performer ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Hot_Lips dbo:artist ?x },ask where{dbr:Hot_Lips dbo:hasPerformer?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are metros within buraidah ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Buraidah dbo:areaMetro ?x },select?x where{dbr:Buraidah dbo:metro?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the length of the wiki page of carl jammes martin's birth place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Carl_Jammes_Martin dbo:birthPlace ?x1 . ?x1 dbo:wikiPageLength ?x },select?x where{dbr:Carl_Jammes_Martin dbo:birthPlace?x1.?x1 dbo:length?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did grik4 have HGNCid ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:GRIK4 dbo:hgncid ?x },ask where{dbr:Grik4 dbo:hgncid?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is mull of kintyre the oldest you can't have my love ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:You_Can't_Have_My_Love dbo:recordDate dbr:Mull_of_Kintyre_(song) },ask where{dbr:Mull_of_Kintyre dbo:oldestYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did ashok leyland mitr start model year in 2011 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Ashok_Leyland_MiTR dbo:modelStartYear ?x },select?x where{dbr:Ashok_Leyland_Mitr dbo:startModelYear?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many computing platform did the room three have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:The_Room_Three dbo:computingPlatform ?x },select count(*) as?x where{dbr:Room_Three dbo:computingPlatform?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the is part of wine region ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{<A> dbo:isPartOfWineRegion ?x . <B> dbo:isPartOfWineRegion ?x },select?x where{dbr:Wine_Region dbo:isPartOf?x1.?x1 dbo:isPartOf?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the compression ratio of suzuki m engine ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Suzuki_M_engine dbo:compressionRatio ?x },select?x where{dbr:Suzuki_M_engine dbo:compressionRatio?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many inflow did molochnyi lyman have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Molochnyi_Lyman dbo:inflow ?x1 . ?x1 dbo:inflow ?x },select count(*) as?x where{dbr:Molochnyi_Lyman dbo:inflow?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Are diabetes medicines of a peripheral artery disease ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Peripheral_artery_disease dbo:medication dbr:Diabetes },ask where{dbr:Peripheral_artery_disease dbo:diabetesMedicine?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many other serving lines did salem station have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Salem_station dbo:otherServingLines ?x },select count(*) as?x where{dbr:Salem_Station dbo:servingLine?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the area of green rock branch's mouth in green rock branch's stomach ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Green_Rock_Branch_(Cherrystone_Creek_tributary) dbo:mouthPlace ?x1 . ?x1 dbo:areaWater ?x },select?x where{dbr:Green_Rock_Branch dbo:stomach?x1.?x1 dbo:mouth?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the mountain ranges and altitudes on the mount jerram ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mount_Jerram dbo:mountainRange ?x },select?x where{dbr:Mount_Jerram dbo:mountainRange?x1.?x1 dbo:altitude?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the board of nelson peltz as well as urs rohner ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Nelson_Peltz dbo:board ?x . dbr:Urs_Rohner dbo:board ?x },select?x where{dbr:Nelson_Peltz dbo:board?x. dbr:Urs_Rohner dbo:board?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does mynydd mechell distance of penrhyd lastra to Cardiff is high ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Penrhyd_Lastra dbo:distanceToCardiff dbr:Mynydd_Mechell },ask where{dbr:Penrhyd_Lastra dbo:distance dbr:Mynydd_Mechell }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is robert b. elliott's death place where the currency has been found ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Robert_B._Elliott dbo:deathPlace ?x1 . ?x1 dbo:currencyCode ?x },select?x where{dbr:Robert_B._Elliott dbo:deathPlace?x1.?x1 dbo:currency?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are some of the Rural Municipalities of alberta highway 14 and alberta highway 34 ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Alberta_Highway_14 dbo:ruralMunicipality ?x . dbr:Alberta_Highway_34 dbo:ruralMunicipality ?x },select?x where{dbr:Alberta_Highway_14 dbo:ruralMunicipality?x. dbr:Alberta_Highway_34 dbo:ruralMunicipality?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the torque output of gmc v6 engine and mercedes-benz m279 engine ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:GMC_V6_engine dbo:torqueOutput ?x . dbr:Mercedes-Benz_M279_engine dbo:torqueOutput ?x },select?x where{dbr:GMC_V6_engine dbo:torqueOutput?x. dbr:Mercedes-Benz_M279_engine dbo:torqueOutput?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many draft teams did jim hamilton have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Jim_Hamilton_(ice_hockey) dbo:whaDraftTeam ?x },select count(*) as?x where{dbr:Jim_Hamilton dbo:draftTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the nationality of mount haku's person that first ascented a mountain ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mount_Haku dbo:firstAscentPerson ?x1 . ?x1 dbo:nationality ?x },select?x where{dbr:Mount_Haku dbo:personFirstAscent?x1.?x1 dbo:nationality?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# nan
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{<A> dbo:headAlloy ?x },select?x where{dbr:Nan_(computer) dbo:operatingSystem?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the status of elisha small's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Elisha_Small dbo:deathPlace ?x1 . ?x1 dbo:status ?x },select?x where{dbr:Elisha_Small dbo:deathPlace?x1.?x1 dbo:status?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are some of the symptoms of neck-tongue syndrome ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Neck-tongue_syndrome dbo:symptom ?x },select?x where{dbr:Neck-tongue_syndrome dbo:symptoms?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many events did rise of the renegades, Inc. have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Rise_of_the_Renegades_(2019) dbo:followingEvent ?x1 . ?x1 dbo:followingEvent ?x },select count(*) as?x where{dbr:Rise_of_the_Renegades dbo:event?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the secret of the lost tunnel's previous works ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:The_Secret_of_the_Lost_Tunnel dbo:previousWork ?x1 . ?x1 dbo:series ?x },select?x where{dbr:The_Lost_Tunnel dbo:previousWork?x1.?x1 dbo:secret?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does johanson–blizzard syndrome have x-linked lymphoproliferative disease symptoms ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Johanson–Blizzard_syndrome dbo:symptom dbr:X-linked_lymphoproliferative_disease },ask where{dbr:Johanson–Blizzard_syndrome dbo:xLinkedLymphoproliferativeDiseaseSymptoms?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who is the pole driver of 1969 italian grand prix ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:1969_Italian_Grand_Prix dbo:poleDriver ?x },select?x where{dbr:1969_Italian_Grand_Prix dbo:poleDriver?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the national team of lonneke slöetjes and vladimir patkin ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Lonneke_Slöetjes dbo:nationalTeam ?x . dbr:Vladimir_Patkin dbo:nationalTeam ?x },select?x where{dbr:Lonneke_slöetjes dbo:nationalTeam?x. dbr:Vladimir_Patkin dbo:nationalTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the number of production company locations ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{<A> dbo:productionCompany ?x1 . ?x1 dbo:numberOfLocations ?x },select count(*) as?x where{dbr:British_Airways dbo:productionCompany?x1.?x1 dbo:numberOfLocations?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the IMDB id of padre coraje's previous work ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Padre_Coraje dbo:previousWork ?x1 . ?x1 dbo:imdbId ?x },select?x where{dbr:Padre_Coraje dbo:previousWork?x1.?x1 dbo:imdbId?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What's the scientific name for strictamine IUPAC ? What ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Strictamine dbo:iupacName ?x },select?x where{dbr:Strictamine dbo:iupac?x1.?x1 dbo:scientificName?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is uscgc hollyhock's homeport named after ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:USCGC_Hollyhock_(WAGL-220) dbo:homeport ?x1 . ?x1 dbo:namedAfter ?x },select?x where{dbr:USCGC_Hollyhock dbo:homeport?x1.?x1 dbo:namedAfter?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is yalnızçam mountains the highest rank of the strawberry range sequence ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Strawberry_Range dbo:highest dbr:Yalnızçam_Mountains },ask where{dbr:Strawberry_range_sequence dbo:highestRank dbr:Yalnızçam_Mountains }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is tooele valley railway reporting mark is texas ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:Tooele_Valley_Railway dbo:reportingMark dbr:Texas,_Oklahoma_and_Eastern_Railroad }",ask where{dbr:Tooele_Valley_railway dbo:reportingMark dbr:Texas }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the area metro for <B> ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Hefei dbo:areaMetro ?x . <B> dbo:areaMetro ?x },select?x where{dbr:B_Metro dbo:areaMetro?x. <B> dbo:areaMetro?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the nationality of house of cards's household ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:House_of_Cards_(American_TV_series) dbo:person ?x1 . ?x1 dbo:nationality ?x },select?x where{dbr:House_of_Cards dbo:household?x1.?x1 dbo:nationality?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# At what time was province of canada dissolution ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Province_of_Canada dbo:dissolutionDate ?x },select?x where{dbr:Province_of_Canada dbo:dissolutionDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is peter kennedy's birthplace and when exactly ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Peter_Kennedy_(diplomat) dbo:birthPlace ?x1 . ?x1 dbo:location ?x },select?x where{dbr:Peter_Kennedy dbo:birthPlace?x1.?x1 dbo:year?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# When is yevgeniya rudneva's military branch disbanded ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Yevgeniya_Rudneva dbo:militaryBranch ?x1 . ?x1 dbo:disbanded ?x },ask where{dbr:Yevgeniya_Rudneva dbo:militaryBranchDisbanded?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did mladen zrilic have to have a block ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Mladen_Zrilic dbo:block ?x },ask where{dbr:Mladen_Zrilic dbo:block?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Who's the vincenzo di nicola Academic Advisor ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Vincenzo_Di_Nicola dbo:academicAdvisor ?x },select?x where{dbr:Vincenzo_Di_Nicola dbo:academicAdvisor?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the orbital period for 1992 fe ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:(5604) _1992_FE dbo:orbitalPeriod ?x },select?x where{dbr:1992_Fe dbo:orbitalPeriod?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the billed of hack meyers ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Hack_Meyers dbo:billed ?x },select?x where{dbr:Hack_Meyers dbo:billed?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is nolichucky river's mouth place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Nolichucky_River dbo:mouthPlace ?x1 . ?x1 dbo:countySeat ?x },select?x where{dbr:Nolichucky_River dbo:mouthPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the federal state of grand duchy of mecklenburg-schwerin's capital ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Grand_Duchy_of_Mecklenburg-Schwerin dbo:capital ?x1 . ?x1 dbo:federalState ?x },select?x where{dbr:Grand_Duchy_of_Mecklenburg-Schwerin dbo:capital?x1.?x1 dbo:federalState?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the relationship of patricia thompson to patricia thompson ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Patricia_Thompson_(writer) dbo:relative ?x },select?x where{dbr:Patricia_Thompson dbo:relationship?x1.?x1 dbo:relationship?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many residence did dawn bowdish have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Dawn_Bowdish dbo:residence ?x },select count(*) as?x where{dbr:Dawn_Bowdish dbo:residence?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the pulaski skyway United States National Bridge ID of congress street bridge ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Congress_Street_Bridge_(Connecticut) dbo:unitedStatesNationalBridgeId dbr:Pulaski_Skyway },ask where{dbr:Congress_Street_Bridge dbo:nationalBridgeID dbr:Pulaski_Skyway }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did 2010 belgian grand prix have third team ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:2010_Belgian_Grand_Prix dbo:thirdTeam ?x },ask where{dbr:2010_belgian_grand_prix dbo:thirdTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is merged with hatzeirim ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:HaTzeirim dbo:mergedWith ?x1 . ?x1 dbo:mergedWith ?x },select?x where{dbr:Hatzeirim dbo:mergedWith?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many formation date did croatian national shift have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Croatian_National_Shift dbo:formationDate ?x },select count(*) as?x where{dbr:Croatian_National_Shift dbo:formationDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the maximum elevation of the planets at vouzy ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Vouzy dbo:maximumElevation ?x },select?x where{dbr:Vouzy dbo:planet?x1.?x1 dbo:maximumElevation?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is dofetilide ChEMBL of the nilotinib ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Nilotinib dbo:chEMBL dbr:Dofetilide },ask where{dbr:Nilotinib dbo:chembl dbr:Dofetilide }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did battle of starokostiantyniv have a military conflict ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Battle_of_Starokostiantyniv dbo:isPartOfMilitaryConflict ?x1 . ?x1 dbo:isPartOfMilitaryConflict ?x },ask where{dbr:Battle_of_Starokostiantyniv dbo:militaryConflict?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is henry woodyer's most significant building ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Henry_Woodyer dbo:significantBuilding ?x1 . ?x1 dbo:architect ?x },select?x where{dbr:Henry_Woodyer dbo:mostSignificantBuilding?x1.?x1 dbo:numberOfFloors?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the end date for 18th cinemalaya independent film festival ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:18th_Cinemalaya_Independent_Film_Festival dbo:endDate ?x },select?x where{dbr:18th_Cinemalaya_Independent_Film_Festival dbo:endDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is savon sanomat circulation of chegemskaya pravda ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Chegemskaya_Pravda dbo:circulation dbr:Savon_Sanomat },ask where{dbr:Chegemskaya_Pravda dbo:circulation dbr:Savon_Sanomat }<|endoftext|>,0.668740304976422
+"# write a SPARQL query for:
+# What do you think is san domenico di pesaro altarpiece museum and why ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:San_Domenico_di_Pesaro_Altarpiece dbo:museum ?x },select?x where{dbr:San_Domenico_di_Pesaro_Altarpiece_Museum dbo:artist?x1.?x1 dbo:museum?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What are the regions served by p&o nedlloyd and oshawa transit ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Oshawa_Transit dbo:regionServed ?x . dbr:P&O_Nedlloyd dbo:regionServed ?x },select?x where{dbr:P&O_Nedlloyd dbo:transitRegion?x. dbr:Oshawa_Transit dbo:transitRegion?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the character in play of byzantium and pearl ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Byzantium_(play) dbo:characterInPlay ?x . dbr:Pearl_(radio_play) dbo:characterInPlay ?x },select?x where{dbr:Byzantium dbo:characterInPlay?x. dbr:Pearl dbo:characterInPlay?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the creator of vida robada's previous work ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Vida_robada_(1991_TV_series) dbo:previousWork ?x1 . ?x1 dbo:creator ?x },select?x where{dbr:Vida_Robada dbo:previousWork?x1.?x1 dbo:creator?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Does callan ward have height ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Callan_Ward dbo:height ?x },ask where{dbr:Callan_Ward dbo:height?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is victorian railways rail tractor engine type with sncf class bb 69400 engine ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Victorian_Railways_rail_tractor dbo:engineType ?x . dbr:SNCF_Class_BB_69400 dbo:engineType ?x },select?x where{dbr:Victorian_railways_rail_tractor_engine dbo:sncfClass?x1.?x1 dbo:engineType?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many anniversary will adelaide universities regiment have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Adelaide_Universities_Regiment dbo:anniversary ?x },select count(*) as?x where{dbr:Adelaide_Universities_Regiment dbo:anniversary?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How is mercedes-benz w11 layout ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Mercedes-Benz_W11 dbo:layout ?x },select?x where{dbr:Mercedes-Benz_W11 dbo:layout?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the breeder of fonso and alibhai ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Fonso dbo:breeder ?x . dbr:Alibhai_(horse) dbo:breeder ?x },select?x where{dbr:Fonso dbo:breeder?x. dbr:Alibhai dbo:breeder?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is 31st battalion the “M march” of indian army chief's band ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:Indian_Army_Chief's_Band dbo:march dbr:31st_Battalion,_Royal_Queensland_Regiment }",ask where{dbr:Indian_Army_Chief dbo:band dbr:31st_Battalion }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the champion in mixed double of 1896 u.s. national championships ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:1896_U.S._National_Championships_(tennis) dbo:championInMixedDouble ?x },select?x where{dbr:1896_U.S._National_Championships dbo:championInMixedDouble?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Do you think altdöbern has a licence number ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Altdöbern dbo:licenceNumber ?x },ask where{dbr:Altdöbern dbo:licenceNumber?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the education of peter beard class /class ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Peter_Beard dbo:education ?x },select?x where{dbr:Peter_Beard dbo:class?x1.?x1 dbo:education?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is former pavol demitra and bob liddington team ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Pavol_Demitra dbo:formerTeam ?x . dbr:Bob_Liddington dbo:formerTeam ?x },select?x where{dbr:Pavol_Demitra dbo:formerTeam?x. dbr:Bob_Liddington dbo:formerTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many election date leaders did bataan provincial board have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Bataan_Provincial_Board dbo:electionDateLeader ?x },select count(*) as?x where{dbr:Bataan_Provincial_Board dbo:electionDate?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did joselo díaz have debut team ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Joselo_Díaz dbo:debutTeam ?x },ask where{dbr:Joselo_Díaz dbo:debutTeam?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is there an upper age of akosombo international school ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Akosombo_International_School dbo:upperAge ?x },ask where{dbr:Akosombo_International_School dbo:upperAge?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Will uss n-1 get a commissioning date of uss floyds bay this year ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:USS_N-1_(SS-53) dbo:commissioningDate dbr:USS_Floyds_Bay_(AVP-40) },ask where{dbr:USS_Floyds_Bay dbo:commissioningDate dbr:USS_N-1 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is bus: 4 other serving lines of krasnopresnenskaya ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>","ask where{dbr:Krasnopresnenskaya dbo:otherServingLines Bus: 4, 6, 39, 64, 69, 116, 152 }",ask where{dbr:Krasnopresnenskaya dbo:otherServingLines dbr:Bus_4 }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did roller office supply carry a NRHP reference number in India ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Roller_Office_Supply dbo:nrhpReferenceNumber ?x },ask where{dbr:Roller_Office_Supply dbo:nrhpReferenceNumberInIndia?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Where is benvenuto cellini's death place ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Benvenuto_Cellini dbo:deathPlace ?x1 . ?x1 dbo:country ?x },ask where{dbr:Benvenuto_cellini dbo:deathPlace?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Which season of blumenau futsal is the best ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Blumenau_Futsal dbo:season ?x },select?x where{dbr:Blumenau_Futsal dbo:season?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the population density of batticaloa and trois-rivières ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Batticaloa dbo:populationUrbanDensity ?x . dbr:Trois-Rivières dbo:populationUrbanDensity ?x },select?x where{dbr:Batticaloa dbo:populationDensity?x. dbr:Trois-Rivières dbo:populationDensity?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Is the linux operating system the same as other urbit operating systems ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Urbit dbo:operatingSystem dbr:Linux },ask where{dbr:Linux_operating_system dbo:sameAs dbr:Other_urbit_operating_system }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What will be next event in swimming at the 2000 summer olympics – men's 400 metre individual medley ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Swimming_at_the_2000_Summer_Olympics_–_Men's_400_metre_individual_medley dbo:nextEvent ?x1 . ?x1 dbo:nextEvent ?x },select?x where{dbr:Swimming_at_the_2000_Summer_Olympics_–_Men's_400_metre_individual_medley dbo:nextEvent?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What was the name of the draft team at doug halward ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Doug_Halward dbo:whaDraftTeam ?x },select?x where{dbr:Doug_Halward dbo:draftTeam?x1.?x1 dbo:name?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the differential diagnosis of parkinson's disease, leukoplakia, and GYP ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:Leukoplakia dbo:differentialDiagnosis ?x . dbr:Parkinson's_disease dbo:differentialDiagnosis ?x },select?x where{dbr:Parkinson's_Disease dbo:differentialDiagnosis?x. dbr:Leukoplakia dbo:differentialDiistance?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# What is the exam structure for 1923 french grand prix ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select ?x where{dbr:1923_French_Grand_Prix dbo:course ?x },select?x where{dbr:1923_French_Grand_Prix dbo:examStructure?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did sam malone have last appearance ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Sam_Malone dbo:lastAppearance ?x },ask where{dbr:Sam_Malone dbo:lastAppearance?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# How many millau viaduct spans did millau viaduct have ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",select count(*) as ?x where{dbr:Millau_Viaduct dbo:numberOfSpans ?x },select count(*) as?x where{dbr:Millau_Viaduct dbo:span?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did national council have a political party ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:National_Council_(Namibia) dbo:politicalPartyOfLeader ?x },ask where{dbr:National_Council dbo:politicalParty?x }<|endoftext|>,0.0
+"# write a SPARQL query for:
+# Did carlos monasterios have birth date ?
+
+# use following prefixes:
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>",ask where{dbr:Carlos_Monasterios dbo:birthDate ?x },ask where{dbr:Carlos_Monasterios dbo:birthDate?x }<|endoftext|>,0.0
