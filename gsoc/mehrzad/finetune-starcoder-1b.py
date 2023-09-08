@@ -323,8 +323,8 @@ class ConstantLengthDataset(IterableDataset):
 def create_datasets(tokenizer):
     dataset = load_dataset(
         'csv', data_files={
-            'train': 'data/nspm_100k_train.csv',
-            'test': 'data/nspm_100k_test.csv'
+            'train': '/home/mehrzad/repos/mehrz/dbpedia/data/nspm-fine-tuning/train.csv',
+            'val': '/home/mehrzad/repos/mehrz/dbpedia/data/nspm-fine-tuning/val.csv'
 }
 #         args.dataset_name,
 #         data_dir=args.subset,
@@ -340,7 +340,7 @@ def create_datasets(tokenizer):
 #         train_data = train_data.shuffle(buffer_size=args.shuffle_buffer, seed=args.seed)
 #     else:
     train_data = dataset["train"]
-    valid_data = dataset["test"]
+    valid_data = dataset["val"]
     print(f"Size of the train set: {len(train_data)}. Size of the validation set: {len(valid_data)}")
 
     chars_per_token = chars_token_ratio(train_data, tokenizer, "prompt", "completion")
