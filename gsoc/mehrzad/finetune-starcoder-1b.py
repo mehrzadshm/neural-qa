@@ -323,8 +323,8 @@ class ConstantLengthDataset(IterableDataset):
 def create_datasets(tokenizer):
     dataset = load_dataset(
         'csv', data_files={
-            'train': '/home/mehrzad/repos/mehrz/dbpedia/data/nspm-fine-tuning/train.csv',
-            'val': '/home/mehrzad/repos/mehrz/dbpedia/data/nspm-fine-tuning/val.csv'
+            'train': '/home/mehr-shahin/repos/dbp/neural-qa/gsoc/mehrzad/data/nspm-fine-tuning/train.csv',
+            'val': '/home/mehr-shahin/repos/dbp/neural-qa/gsoc/mehrzad/data/nspm-fine-tuning/val.csv'
 }
 #         args.dataset_name,
 #         data_dir=args.subset,
@@ -435,6 +435,30 @@ def run_training(args, train_data, val_data):
 
 
 def main(args):
+
+    ## new edit
+    print("\n\n")
+    if torch.cuda.is_available():
+        torch.cuda.init()
+        torch.cuda.empty_cache()
+        current_device = torch.cuda.current_device()
+
+        print(f"Using CUDA device: {torch.cuda.get_device_name(current_device)}")
+
+        # Memory currently being used
+        allocated_memory = torch.cuda.memory_allocated(current_device) / 1024 ** 2  # Convert bytes to MB
+        print(f"Memory Allocated: {allocated_memory:.2f} MB")
+
+        # Max memory that can potentially be allocated (might be fragmented)
+        reserved_memory = torch.cuda.memory_reserved(current_device) / 1024 ** 2  # Convert bytes to MB
+        print(f"Memory Reserved: {reserved_memory:.2f} MB")
+    else:
+        print("CUDA is not available.")
+
+    print("\n\n")
+
+
+
     tokenizer = AutoTokenizer.from_pretrained(args.model_path, use_auth_token=True)
     train_dataset, eval_dataset = create_datasets(tokenizer)
     run_training(args, train_dataset, eval_dataset)
