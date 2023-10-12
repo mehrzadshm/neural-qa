@@ -58,11 +58,6 @@ def calculate_bleu(actual, generated, metric_name):
 
 
 class SPARQLPostProcessor:
-    
-    ## TODO
-    # full stop
-
-
     # Remove unwanted tokens
     def remove_tokens(self, generated_output, tokens_to_remove=["Answer:", "<|endoftext|>"]):  # Replace with the actual EOS token
         for token in tokens_to_remove:
@@ -73,6 +68,10 @@ class SPARQLPostProcessor:
     # custom spacing rules to algin with nspm dataset
     def apply_spacing_rules(self, query):
     
+        # Remove redundant spaces
+        query = re.sub(r' +', ' ', query)
+        query = query.strip()
+        
         # Ensure space before "?"
         query = re.sub(r'(?<=[^\s])\?', ' ?', query)
         
@@ -82,8 +81,11 @@ class SPARQLPostProcessor:
         # Ensure space before "}"
         query = re.sub(r'(?<=[^\s])}', ' }', query)
         
-        # Ensure space before and after "."
-        query = re.sub(r'(?<=[^\s])\.(?=[^\s])', ' . ', query)
+        # Ensure space before "."
+        query = re.sub(r'(?<=[^\s])\.', ' .', query)
+        
+        # Ensure space after "."
+        query = re.sub(r'\.(?=[^\s])', '. ', query)
         
         # Ensure no space before and after "{"
         query = re.sub(r'\s?{\s?', '{', query)
@@ -94,12 +96,10 @@ class SPARQLPostProcessor:
         return query
     
 
-    
     def post_process(self, query):
         query = self.remove_tokens(query)
         query = self.apply_spacing_rules(query)
-        #
-        #
+        
         return query
 
 
@@ -134,6 +134,7 @@ def main():
     
 
     with open(f'{args.report_file_name}.csv', 'w', newline='') as csvfile:
+        
         csvwriter = csv.writer(csvfile)
         # Write the header row
         csvwriter.writerow(['Prompt', 'Actual SPARQL', 'Generated SPARQL', 'BLEU Score (Generated)', 'Post-Processed SPARQL', 'BLEU Score (Post-Processed)'])
@@ -141,42 +142,46 @@ def main():
         # Initialize total BLEU scores
         total_bleu_score_raw = 0
         total_bleu_score_postprocessed = 0
-	    
+        
         for idx, row in data.iterrows():
-           prompt, actual_sparql = row[args.input_column_name], row[args.output_column_name]
-           
-           # Generate SPARQL
-           generated_sparql = generate_SPARQL(model, tokenizer, prompt)
-           generated_sparql = generated_sparql[len(prompt):]  # Removing the prompt from the generated SPARQL
-           
-           # Calculate BLEU Score for generated SPARQL
-           bleu_score_generated = calculate_bleu(actual_sparql, generated_sparql, args.metric_name)
-           total_bleu_score_raw += bleu_score_generated
-        
-           # Post-process the SPARQL
-           post_processed_sparql = post_processor.post_process(generated_sparql)
-        
-           # Calculate BLEU Score for post-processed SPARQL
-           bleu_score_post_processed = calculate_bleu(actual_sparql, post_processed_sparql, args.metric_name)
-           total_bleu_score_postprocessed += bleu_score_post_processed
-        
-           # Write Results to CSV
-           csvwriter.writerow([prompt, actual_sparql, generated_sparql, bleu_score_generated, post_processed_sparql, bleu_score_post_processed])
-        
-           # Log Progress
-           if args.verbose and idx % 100 == 0:  # adjust based on how frequently you want to log
-              logging.info(f"Processed {idx} rows. BLEU Score - Generated: {bleu_score_generated}, Post-Processed: {bleu_score_post_processed}")
-      
+            try:
+                prompt, actual_sparql = row[args.input_column_name], row[args.output_column_name]
+                
+                # Generate SPARQL
+                generated_sparql = generate_SPARQL(model, tokenizer, prompt)
+                generated_sparql = generated_sparql[len(prompt):]  # Removing the prompt from the generated SPARQL
+
+                # Calculate BLEU Score for generated SPARQL
+                bleu_score_generated = calculate_bleu(actual_sparql, generated_sparql, args.metric_name)
+                total_bleu_score_raw += bleu_score_generated
+
+                # Post-process the SPARQL
+                post_processed_sparql = post_processor.post_process(generated_sparql)
+
+                # Calculate BLEU Score for post-processed SPARQL
+                bleu_score_post_processed = calculate_bleu(actual_sparql, post_processed_sparql, args.metric_name)
+                total_bleu_score_postprocessed += bleu_score_post_processed
+
+                # Write Results to CSV
+                csvwriter.writerow([prompt, actual_sparql, generated_sparql, bleu_score_generated, post_processed_sparql, bleu_score_post_processed])
+
+                # Log Progress
+                if args.verbose and idx % 100 == 0:  # adjust based on how frequently you want to log
+                    logging.info(f"Processed {idx} rows. BLEU Score - Generated: {bleu_score_generated}, Post-Processed: {bleu_score_post_processed}")  
 
 
-    average_bleu_score_raw = total_bleu_score_raw / len(data)
-    average_bleu_score_postproccesed = total_bleu_score_postproccesed / len(data)
+            except Exception as e:
+                print(f"Error processing row {idx}: {e}")
+ 
+
+    #average_bleu_score_raw = total_bleu_score_raw / len(data)
+    #average_bleu_score_postproccesed = total_bleu_score_postproccesed / len(data)
 
     
     print("\n" + "*"*80 + f"\nResults written to {args.report_file_name}.csv")
 
-    print(f"\nAverage BLEU score for raw generated queries with {len(data)} test samples: ", average_bleu_score_raw)
-    print(f"\nAverage BLEU score with post-proccesing: ", average_bleu_score_postproccesed)
+    #print(f"\nAverage BLEU score for raw generated queries with {len(data)} test samples: ", average_bleu_score_raw)
+    #print(f"\nAverage BLEU score with post-proccesing: ", average_bleu_score_postproccesed)
 
 
     # delete model & tokenizer and clear cache 

@@ -8,6 +8,7 @@ import argparse
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--base_model_name_or_path", type=str, default="bigcode/large-model")
+    parser.add_argument("--merged_model_name_suffix", type=str, default="merged")
     parser.add_argument("--peft_model_path", type=str, default="/")
     parser.add_argument("--push_to_hub", action="store_true", default=True)
 
@@ -32,9 +33,9 @@ def main():
     #     model.push_to_hub(f"{args.base_model_name_or_path}-merged", use_temp_dir=False, private=True)
     #     tokenizer.push_to_hub(f"{args.base_model_name_or_path}-merged", use_temp_dir=False, private=True)
     # else:
-    model.save_pretrained(f"{args.base_model_name_or_path}-merged")
-    tokenizer.save_pretrained(f"{args.base_model_name_or_path}-merged")
-    print(f"Model saved to {args.base_model_name_or_path}-merged")
+    model.save_pretrained(f"{args.base_model_name_or_path}-{args.merged_model_name_suffix}")
+    tokenizer.save_pretrained(f"{args.base_model_name_or_path}-{args.merged_model_name_suffix}")
+    print(f"Model saved to {args.base_model_name_or_path}-{args.merged_model_name_suffix}")
 
 if __name__ == "__main__" :
     main()
